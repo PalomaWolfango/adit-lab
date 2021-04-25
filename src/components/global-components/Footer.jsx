@@ -16,13 +16,13 @@ const Footer =()=>{
                                 <div className="row">
                                         <img src={data.logos.logo1}/>
                                         <img src={data.logos.logo2}/>
-                                        {/* <div className="title">
+                                        <p>
                                             <Link  to="/contact">
-                                                <h4>{data.contactUs}</h4>
+                                                <p><b>{data.contactUs}</b></p>
                                             </Link>
                                             <p>{data.phone}</p>
                                             <p>{data.email}</p>
-                                        </div> */}
+                                        </p>
                                         {/* <p>
                                         {data.mainFooter.about.content}
                                         </p>

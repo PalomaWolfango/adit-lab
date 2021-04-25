@@ -1746,7 +1746,7 @@ footer .overlay {
   width: 30%;
   margin: 1%;
   padding-bottom: 20px;
-  padding-left: 15%;
+  padding-left: 10%;
 }
 
 /* .footer-top .title {
@@ -1759,16 +1759,20 @@ footer .overlay {
   font-size: 20px;
 }
 
-.footer-top .title p {
+/* .footer-top .title p {
   color: #fff;
   font-size: 12px;
   margin: 30px;
   padding-right: 15%;
-}
+} */
 
 .footer-top p {
   color: #fff;
+  font-size: 13px;
+  margin-left: 70px;
+
 }
+
 .footer-top .more {
   padding: 20px 0;
 }
