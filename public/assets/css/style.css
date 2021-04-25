@@ -1749,9 +1749,6 @@ footer .overlay {
   padding-left: 10%;
 }
 
-/* .footer-top .title {
-  padding-bottom: 0px;
-} */
 .footer-top .title h4 {
   color: #fff;
   text-transform: capitalize;
@@ -1759,23 +1756,21 @@ footer .overlay {
   font-size: 20px;
 }
 
-/* .footer-top .title p {
-  color: #fff;
-  font-size: 12px;
-  margin: 30px;
-  padding-right: 15%;
-} */
-
 .footer-top p {
   color: #fff;
-  font-size: 13px;
-  margin-left: 70px;
+  font-size: 90%;
+  margin-left: 10%;
+}
 
+.footer-top .contacts {
+    position: relative;
+    padding-left: 8%;
 }
 
 .footer-top .more {
   padding: 20px 0;
 }
+
 .footer-top ul li a {
   display: inline-block;
   color: #fff;
@@ -1784,6 +1779,7 @@ footer .overlay {
   font-family: "Heebo", sans-serif;
   font-weight: 400;
 }
+
 .footer-top .more a {
   text-transform: uppercase;
   color: #fff;
@@ -1793,20 +1789,25 @@ footer .overlay {
   padding-left: 15px;
   font-size: 12px;
 }
+
 .footer-top .more a:hover {
   color: var(--main-blue);
 }
+
 .footer-top .social {
   width: 100%;
   padding-top: 20px;
   /* border-top: 1px solid hsla(0, 0%, 100%, 0.2); */
 }
+
 .footer-top .social ul li {
   padding-right: 20px;
 }
+
 .footer-top .social ul li:last-child {
   padding-right: 0;
 }
+
 .footer-top .social ul li a i {
   font-size: 16px;
   color: #fff;
@@ -1816,6 +1817,7 @@ footer .overlay {
   -o-transition: all linear 0.3s;
   transition: all linear 0.3s;
 }
+
 .footer-top .social ul li a:hover i {
   color: var(--main-blue);
 }

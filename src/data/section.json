@@ -988,8 +988,10 @@
                 "logo2": "assets/images/home1/logo_ipvc.png"
             },
             "contactUs": "Contact Us:",
-            "phone": "Phone: +351 258 809 610",
-            "email": "E-mail: arc4digit@ipvc.pt",
+            "titlePhone": "Phone:",
+            "phoneNumber": "+351 258 809 610",
+            "titleEmail": "E-mail:",
+            "email": "arc4digit@ipvc.pt",
             "mainFooter": {
                 "about": {
                     "title": "About",
