@@ -33,7 +33,7 @@ const NavigationMenu = () => {
                                     <li>
                                         {/* <Link to="#!">service</Link> */}
                                         {/* <Link to="/team">team</Link> */}
-                                        <Link to="/team">team</Link>
+                                        <Link to="/">team</Link>
                                         <ul>
                                             {/* <li><Link to="/service">service</Link></li>
                                             <li>
@@ -43,7 +43,7 @@ const NavigationMenu = () => {
                                     </li>
                                     <li>
                                     {/* <Link to="/project">project</Link> */}
-                                    <Link to="#!">project</Link>
+                                    <Link to="/">project</Link>
                                         {/* <ul>
                                             <li><Link to="/about">about us</Link></li>
                                             <li><Link to="/service">service</Link></li>
@@ -59,7 +59,7 @@ const NavigationMenu = () => {
                                             <li><Link to="*">404</Link></li>
                                         </ul> */}
                                     </li>
-                                    <li><Link to="#!">publications</Link></li>
+                                    <li><Link to="/">publications</Link></li>
                                     <li><Link to="/research-areas">research areas</Link></li>
                                     <li><Link to="/contact">contacts</Link></li>
                                 </ul>

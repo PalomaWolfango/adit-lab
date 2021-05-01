@@ -9,7 +9,7 @@ const ResearchAreas = () => {
     return (
         <>
             {/* <!-- start research areas details area --> */}
-            <section className="blog-detail pt-120">
+            <section className="blog-detail pt-121">
                 <div className="container">
                     <div className="row">
                         {/* <!-- start research areas detail inner --> */}

@@ -8,7 +8,7 @@ const Service = () => {
     return (
         <div>
                 {/* <!-- start service area --> */}
-                <section className={`service pt-120 pb-90 ${window.location.pathname !== '/about' ? "bg-blue": " "}`}>
+                <section className={`service pt-121 pb-90 ${window.location.pathname !== '/about' ? "bg-blue": " "}`}>
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-8 offset-lg-2">
