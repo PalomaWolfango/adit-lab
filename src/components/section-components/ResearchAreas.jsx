@@ -8,48 +8,27 @@ const ResearchAreas = () => {
 
     return (
         <>
-            {/* <!-- start blog details area --> */}
+            {/* <!-- start research areas details area --> */}
             <section className="blog-detail pt-120">
-        <div className="container">
-            <div className="row">
-                {/* <!-- start blog detail inner --> */}
-                <div className="col-lg-8 order-1 order-lg-0" align="justify">
-                    <div className="detail-inner">
-                        <h3 className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{data.title1}</h3>
-                        <p className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{data.content1}</p>
-                        <p className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{data.content2}</p>
-                        <p className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{data.content3}</p>
-                        <p className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{data.content4}</p>
-                        <br></br>
-                        <h3 className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{data.title2}</h3>
-                        <p className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{data.content1}</p>
-                        <p className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{data.content2}</p>
-                        <p className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{data.content3}</p>
-                        <p className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{data.content4}</p>
-                        <br></br>
-                        <h3 className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{data.title3}</h3>
-                        <p className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{data.content1}</p>
-                        <p className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{data.content2}</p>
-                        <p className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{data.content3}</p>
-                        <p className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{data.content4}</p>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
+                <div className="container">
+                    <div className="row">
+                        {/* <!-- start research areas detail inner --> */}
+                        {data.researchAreasDetails.map((item)=>{
+                            return <div className="col-lg-8 order-1 order-lg-0" align="justify">
+                                        <div className="detail-inner">
+                                            <h3 className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{item.title}</h3>
+                                            <p className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{item.content}</p>
+                                            <p className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{item.content2}</p>
+                                            <p className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{item.content3}</p>
+                                            <br></br>
+                                        </div>
+                                    </div>
+                        })}
+                        {/* <!-- end research areas detail inner --> */}
                     </div>
                 </div>
-                {/* <!-- end blog detail inner --> */}
-
-                {/* <!-- start blog sidebar area --> */}
-                <div className="col-lg-4 order-0 order-lg-1">
-                   {/* <SideBar /> */}
-                </div>
-                {/* <!-- end blog sidebar area --> */}
-            </div>
-        </div>
-    </section>
-            {/* <!-- end blog details area --> */}
+            </section>
+            {/* <!-- end research areas details area --> */}
 
         </>
     );

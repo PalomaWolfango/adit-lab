@@ -135,28 +135,28 @@
         "count":{
             "singleCount":[
                 {
-                    "title":"Business Solution",
-                    "percent":73,
+                    "title":"Collaborators from the center",
+                    "percent":20,
                     "animation":"fadeInRight",
                     "animationDelay":"0.4s"
                 },
                 {
-                    "title":"24/7 Support",
-                    "percent":65,
+                    "title":"Scholarship Holders",
+                    "percent":15,
                     "animation":"fadeInUp",
                     "animationDelay":"0.3s"
                 },
                 {
-                    "title":"Development",
-                    "percent":78,
+                    "title":"Projects",
+                    "percent":100,
                     "animation":"fadeInUp",
                     "animationDelay":"0.3s"
                 },
                 {
-                    "title":"Client Strategy",
-                    "percent":83,
-                    "animation":"fadeInLeft",
-                    "animationDelay":"0.4s"
+                    "title": "Publications",
+                    "percent": 55,
+                    "animation": "fadeInLeft",
+                    "animationDelay": "0.4s"
                 }
             ]
         },
@@ -240,24 +240,24 @@
             "singleService": [
                 {
                     "icon": "flaticon-diagram",
-                    "image": "assets/images/home1/service/teste1.jpg",
+                    "image": "assets/images/home1/service/IE2.jpg",
                     "animation": "fadeInUp",
                     "title": "Intelligent Environment",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."
+                    "content": "Intelligent Environments (IE) result from the harmonious integration of information and communication technologies (ICT) with the physical world."
                 },
                 {
                     "icon": "flaticon-meeting",
-                    "image": "assets/images/home1/service/teste1.jpg",
+                    "image": "assets/images/home1/service/IM.jpg",
                     "animation": "fadeInRight",
                     "title": "Interactive Media",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."
+                    "content": "The main objective of the Interactive Media thematic area is the development of interactive systems, technologies and media contents."
                 },
                 {
                     "icon": "flaticon-management",
-                    "image": "assets/images/home1/service/teste1.jpg",
+                    "image": "assets/images/home1/service/back.jpg",
                     "animation": "fadeInLeft",
                     "title": "Organizational Processes",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."
+                    "content": "Organizational Processes involves all the activities that aggregate value to products and services along the supply chain of the organizations."
                 }
             ]
         },
@@ -375,9 +375,11 @@
         },
         "team": {
             "sectionHeading": {
-                "subtitle":"Team Members",
-                "title": "Quality Team Members",
-                "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinciunt consectetuer adipiscing elit, sed diam nonummy"
+                "title": "Team Members",
+                "content": "All the team members are here.",
+                "collaborator": "Collaborator",
+                "executiveBoard": "Executive Board",
+                "scholarshipHolder": "Scholarship Holder"
             },
             "member": [{
                     "id": 1,
@@ -385,9 +387,9 @@
                     "twitterLink": "#!",
                     "linkdinLink": "#!",
                     "instagramLink": "#!",
-                    "name": "Satrina Donahu",
-                    "designation": "Programmer",
-                    "image": "assets/images/home1/team/img1.jpg",
+                    "name": "Sara Paiva",
+                    "designation": "Coordinator",
+                    "image": "assets/images/home1/team/sarapaiva.png",
                     "animation":"fadeInRight"
                 },
                 {
@@ -396,9 +398,9 @@
                     "twitterLink": "#!",
                     "linkdinLink": "#!",
                     "instagramLink": "#!",
-                    "name": "Richard Powel",
-                    "designation": "Designer",
-                    "image": "assets/images/home1/team/img2.jpg",
+                    "name": "Sara Paiva",
+                    "designation": "Coordinator",
+                    "image": "assets/images/home1/team/sarapaiva.png",
                     "animation":"fadeInUp"
                 },
                 {
@@ -407,42 +409,9 @@
                     "twitterLink": "#!",
                     "linkdinLink": "#!",
                     "instagramLink": "#!",
-                    "name": "Wicha Dowel",
-                    "designation": "Developer",
-                    "image": "assets/images/home1/team/img3.jpg",
-                    "animation":"fadeInLeft"
-                },
-                {
-                    "id": 4,
-                    "facebookLink": "#!",
-                    "twitterLink": "#!",
-                    "linkdinLink": "#!",
-                    "instagramLink": "#!",
-                    "name": "Wicha Dowel",
-                    "designation": "Co-Founder",
-                    "image": "assets/images/home1/team/img4.jpg",
-                    "animation":"fadeInRight"
-                },
-                {
-                    "id": 5,
-                    "facebookLink": "#!",
-                    "twitterLink": "#!",
-                    "linkdinLink": "#!",
-                    "instagramLink": "#!",
-                    "name": "Thomas Aldin",
-                    "designation": "Co-Founder",
-                    "image": "assets/images/home1/team/img5.jpg",
-                    "animation":"fadeInDown"
-                },
-                {
-                    "id": 6,
-                    "facebookLink": "#!",
-                    "twitterLink": "#!",
-                    "linkdinLink": "#!",
-                    "instagramLink": "#!",
-                    "name": "kate lora",
-                    "designation": "Co-Founder",
-                    "image": "assets/images/home1/team/img6.jpg",
+                    "name": "Sara Paiva",
+                    "designation": "Coordinator",
+                    "image": "assets/images/home1/team/sarapaiva.png",
                     "animation":"fadeInLeft"
                 }
             ]
@@ -945,13 +914,25 @@
             "apiKey": "AIzaSyCjkssBA3hMeFtClgslO2clWFR6bRraGz0"
         },
         "researchAreas":{
-            "title1":"Intelligent Environments",
-            "title2":"Interactive Media",
-            "title3":"Organizational Processes",
-            "content1":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna ali Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irures dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null pariatur. Excepteur sint occaecat cupidatat nonm proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor.",
-            "content2":"sit amet, consectetur adipisicielit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis fvUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
-            "content3":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolor magna ali Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e eacommodot consequa. Duis aute irures dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatuo Excepteur sint occcat cupidatat nonm proident, sunt in culpa qu officia",
-            "content4":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi"
+            "researchAreasDetails": [{
+                "title": "Intelligent Environments",
+                "name": "Intelligent Environments",
+                "content": "Intelligent Environments (IE) result from the harmonious integration of information and communication technologies (ICT) with the physical world, where networked sensors, actuators, and controllers are blended together with ubiquitous computing to foster interaction with the user and its immediate surroundings, to enhance the user experience. ",
+                "content2": "This thematic line is a crucial topic on digital transformation and constitutes a promising source for business innovation towards sustainability, which may include, not only the design of more sustainable products, but also the introduction of new disruptive services, and business models. The development of such environments typically includes several layers, like sensing/actuation, networking, reasoning, security & privacy, and human interaction, demanding for a multidisciplinary team with traversal competencies in several technology fields, such as the Internet of Things (IoT), Artificial Intelligence (AI), Ubiquitous & Mobile Computing (UMC), Human-Computer Interaction (HCI) and Cybersecurity. This blend of competencies paves the way for innovation with the aim of enhancing peoples' life in more sustainable environments such as cities, buildings, factories, campi, hospitals, etc."
+            },
+            {
+                "title": "Interactive Media",
+                "name": "Interactive Media",
+                "content": "The main objective of the Interactive Media thematic area is the development of interactive systems, technologies and media contents, most suitable to the interests and needs of a person or an organization, enhancing the best experience on using them.",
+                "content2": "The main interests of the ADiT researchers, in result of the experience accumulated over the years, includes the development for Virtual, Augmented and Mixed Reality, Geographic Information Systems, Serious Games, Digital Technologies for Education, Computer Vision, Information Visualization and Interactive Systems, with application in three main areas: Digital Cultural Heritage, Health and Education, contributing to promote the well-being of all, and thus ensuring the inclusive and sustainable growth of society."
+            },
+            {
+                "title": "Organizational Proccesses",
+                "name": "Organizational Proccesses",
+                "content": "Organizational Processes involves all the activities that aggregate value to products and services along the supply chain of the organizations. Efficient management of materials, information and financial flows work on improving the organization's economic, social and environmental sustainability. ",
+                "content2": "In ADiT-LAB, the Organizational Processes research area deals with logistics and supply chain performance evaluation; traceability in value and supply chains; digitalization of industry and organizations towards circular value chains; integrating business processes for circular economy and sustainability; sustainable mobility practices; design and performance evaluation of industrial and services systems.",
+                "content3": "Multidisciplinary research is pursued under a sustainable systems approach, suitable to address the challenges of Industry 4.0."
+            }]
         },
         "contact": {
             "getAdvice": {

@@ -14,6 +14,12 @@ const ResearchAreas = () => {
        <Layouts  pageTitle="Research Areas">
            <HeaderV3  background={data.researchAreas.background} title={data.researchAreas.title} pageName={data.researchAreas.pageName}  />
            <ResearchAreasInner />
+           <br></br>
+           <br></br>
+           <br></br>
+           <br></br>
+           <br></br>
+           <br></br>
            <Footer />
        </Layouts>
     );

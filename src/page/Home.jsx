@@ -24,10 +24,10 @@ const Home = () => {
            <>
            <Layouts>
                <Header background={data.background} title={data.title}/>
-               {/* <Offer />
-               <Count />
-               <About /> */}
+               {/* <Offer /> */}
+               {/* <About /> */}
                <Service />
+               <Count />
                {/* <Team />
                <Project />
                <Client />

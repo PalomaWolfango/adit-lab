@@ -15,8 +15,8 @@ const NavigationMenu = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-25">
-                        <nav className="navbar p-0">
-                            <Link className="navbar-brand p-0" to="/" style={{width:'28.7%'}}>
+                        <nav className="navbar p-0" style={{marginLeft: 'none'}}>
+                            <Link to="/" style={{width:'30%'}}>
                                 <img src={data.logo} alt="Logo"/>
                             </Link>
                             <div className={`header-menu ml-auto position-static ${menuToggle === true ? 'menuToggle' : ''}`}>
@@ -33,7 +33,7 @@ const NavigationMenu = () => {
                                     <li>
                                         {/* <Link to="#!">service</Link> */}
                                         {/* <Link to="/team">team</Link> */}
-                                        <Link to="#!">team</Link>
+                                        <Link to="/team">team</Link>
                                         <ul>
                                             {/* <li><Link to="/service">service</Link></li>
                                             <li>

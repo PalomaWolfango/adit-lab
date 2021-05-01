@@ -16,7 +16,6 @@ const TeamPage = () => {
             <Layouts  pageTitle='Team'>
                 <HeaderV3 background={data.team.background} title={data.team.title} pageName={data.team.pageName} />
                 <Team />
-                <Connect />
                 <Footer />
             </Layouts>
         </>

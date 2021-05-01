@@ -17,8 +17,12 @@ const TeamDetails = () => {
             <Layouts  pageTitle='Team Details'>
                 <HeaderV3 background={data.teamDetails.background} title={data.teamDetails.title} pageName={data.teamDetails.pageName} />
                 <TeamDetailsInner />
-                <Team />
-                <Connect />
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
                 <Footer />
             </Layouts>
         </>

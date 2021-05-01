@@ -360,7 +360,7 @@ select {
   padding-top: 120px;
 }
 .pt-90 {
-  padding-top: 90px;
+  margin-bottom: 200px;
 }
 .pb-90 {
   padding-bottom: 90px;
@@ -921,7 +921,6 @@ select {
   box-shadow: 19px 0 54px hsla(0, 0%, 0%, 0.05);
   position: relative;
   background: #fff;
-  margin: auto;
   margin-bottom: 63px;
 }
 .count .count-item .circle:after {
@@ -1221,13 +1220,23 @@ select {
 .team {
   padding-bottom: 200px;
 }
+
+.team .item .container{
+  border: 0.3px solid var(--dark-blue);
+  border-radius: 5px;
+  margin-bottom: 65px;
+  margin-left: 25%;
+  width: 80%;
+  height: 225px;
+  margin-top: -250px;
+}
 .team .item .image {
-  height: 347px;
-  width: 286px;
+  width:  225px;
+  height: 225px;
+  object-fit: cover;
   border-radius: 15px;
   overflow: hidden;
-  margin-top: 20px;
-  margin-left: 55px;
+  margin: 30px;
   position: relative;
   z-index: 9;
 }
@@ -1326,6 +1335,7 @@ select {
   position: absolute;
   bottom: 15px;
   left: 40px;
+  margin: 10px;
 }
 .team .item .shape a {
   text-transform: capitalize;
@@ -2302,7 +2312,7 @@ footer .overlay {
   stroke: var(--main-blue) !important;
 }
 .CircularProgressbar .CircularProgressbar-text{
-  fill: var(--main-blue) !important;
+  fill: #151a33 !important;
   font-size: 15px !important;
   font-weight: 700 !important;
 }
@@ -2482,10 +2492,30 @@ footer .overlay {
 ===========================================================*/
 .team-page.team .reverse .image {
   margin-left: 25px;
+  padding: 20px;
+  width: 50%;
 }
 .team-page.team .reverse .shape {
   left: auto;
   right: 30px;
+}
+
+.team-page.team .button {
+    height: 50px;
+    width: 180px;
+    border: 2px solid var(--dark-blue);
+    border-radius: 5px;
+    background-color: white;
+    color: var(--dark-blue);
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    margin-left: 30px;
+}
+
+.team-page.team .button:hover {
+  background: var(--dark-blue);
+  color: white;
 }
 
 /*=========================================================
@@ -2732,6 +2762,7 @@ footer .overlay {
 }
 .blog-detail .detail-inner p {
   padding-bottom: 25px;
+  font-size: 18px;
 }
 .blog-detail .blog-meta {
   margin-bottom: 25px;
