@@ -33,7 +33,7 @@ const NavigationMenu = () => {
                                     <li>
                                         {/* <Link to="#!">service</Link> */}
                                         {/* <Link to="/team">team</Link> */}
-                                        <Link to="/">team</Link>
+                                        <Link to="/team-executive-board">team</Link>
                                         <ul>
                                             {/* <li><Link to="/service">service</Link></li>
                                             <li>

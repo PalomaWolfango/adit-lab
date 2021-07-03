@@ -11,8 +11,8 @@ function Hero (props){
     return(
         <>
         {/* <!-- start banner area --> */}
-        <section className="banner">
-            <div className="container" style={{height: '80px'}}>
+        <section className="banner" className="banner" style={{background:`url(${publicUrl + props.background})`}}>
+            <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="banner-text wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">

@@ -23,7 +23,7 @@ const Home = () => {
        return (
            <>
            <Layouts>
-               <Header background={data.background} title={data.title}/>
+               <Header background={data.background} title={data.title} />
                {/* <Offer /> */}
                {/* <About /> */}
                <Service />

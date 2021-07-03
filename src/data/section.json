@@ -90,7 +90,7 @@
             "title": "Home",
             "pageName": "Home",
             "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
-            "background": "assets/images/home2/banner/teste.jpg",
+            "background": "assets/images/home1/service/home.jpg",
             "channelName": "youtube",
             "videoId": "LCmsrVOXzZc"
         },
@@ -254,7 +254,7 @@
                 },
                 {
                     "icon": "flaticon-management",
-                    "image": "assets/images/home1/service/back.jpg",
+                    "image": "assets/images/home1/service/OP2.jpg",
                     "animation": "fadeInLeft",
                     "title": "Organizational Processes",
                     "content": "Organizational Processes involves all the activities that aggregate value to products and services along the supply chain of the organizations."

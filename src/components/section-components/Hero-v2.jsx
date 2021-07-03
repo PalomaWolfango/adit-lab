@@ -6,7 +6,7 @@ import { sectionData } from './../../data/section.json';
 
 const HeroV2 = () => {
     const [isOpen, setOpen] = useState(false)
-    let data = sectionData.bannerV2
+    let data = sectionData.banner
     let publicUrl = process.env.PUBLIC_URL+'/'
     return (
         <>
@@ -17,25 +17,8 @@ const HeroV2 = () => {
                     <div className="row">
                         <div className="col-lg-8">
                             <div className="banner-text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                                <p>{data.subtitle}</p>
                                 <h1>{data.title}</h1>
-                                <p>
-                                    {data.content}
-                                </p>
-                                <ul className="d-flex">
-                                    <li>
-                                        <Link to="/about" className="btn-style"><span>about us</span></Link>
-                                    </li>
-                                    <li>
-                                        <ModalVideo channel={data.channelName} autoplay isOpen={isOpen} videoId={data.videoId} onClose={() => setOpen(false)} />
-                                        <Link to="#!" className="special-btn d-flex align-items-center" onClick={()=>{setOpen(true)}}>
-                                            <div className="vid-btn">
-                                                <span className="btn-inner"><i className="fas fa-play"></i></span>
-                                            </div>
-                                            How we work
-                                        </Link>
-                                    </li>
-                                </ul>
+                                
                             </div>
                         </div>
                     </div>

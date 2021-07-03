@@ -2,12 +2,12 @@ import React from 'react';
 import NavigationMenu from '../global-components/NavigationMenu';
 import Hero from './Hero';
 
-const Header = () => {
+const Header = (props) => {
 
     return (
         <header>
             <NavigationMenu />
-            <Hero/>
+            <Hero background={props.background}/>
         </header>
     );
 }

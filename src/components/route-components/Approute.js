@@ -8,7 +8,9 @@ import ProjectPage from '../../page/ProjectPage';
 import ServiceDetails from '../../page/ServiceDetails';
 import ServicePage from '../../page/ServicePage';
 import TeamDetails from '../../page/TeamDetails';
-import TeamPage from '../../page/TeamPage';
+import TeamPageCollaborator from '../../page/TeamPageCollaborator';
+import TeamPageExecutiveBoard from '../../page/TeamPageExecutiveBoard';
+import TeamPageScholarshipHolder from '../../page/TeamPageScholarshipHolder';
 import ErrorPage from '../../page/Error.jsx'
 import ContactPage from '../../page/ContactPage';
 import BlogDetails from '../../page/BlogDetails';
@@ -26,13 +28,15 @@ function AppRoute() {
                 < Route path = '/service' exact component = { ServicePage } />
                 < Route path = '/service-details' exact component = { ServiceDetails } />
                 < Route path = '/project' exact component = { ProjectPage } />
-                < Route path = '/team' exact component = { TeamPage } />
+                < Route path = '/team-executive-board' exact component = { TeamPageExecutiveBoard } />
+                < Route path = '/team-scholarship-holder' exact component = { TeamPageScholarshipHolder } />
+                < Route path = '/team-collaborator' exact component = { TeamPageCollaborator } />
                 < Route path = '/team-details' exact component = { TeamDetails } />
                 < Route path = '/pricing' exact component = { PricingPage } />
                 < Route path = '/contact' exact component = { ContactPage } />
                 < Route path = '/blog-details' exact component = { BlogDetails } />
                 < Route path = '/research-areas' exact component = { ResearchAreasPage } />
-                < Route path = '*' exact component = { ErrorPage } />
+                {/* < Route path = '*' exact component = { ErrorPage } /> */}
             </ Switch> 
         </ BrowserRouter>
     )

@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 import axios from "axios";
 import SectionTitle from '../global-components/SectionTitle';
-import {sectionData} from '../../data/section.json'
+import {sectionData} from './../../data/section.json'
 import ReactPaginate from 'react-paginate';
 import { useHistory } from "react-router-dom";
 import Pagination from "../../data/Pagination.js";
@@ -10,7 +10,7 @@ import _ from "lodash";
 import { when } from "jquery";
 
 
-const Team = () => {
+const TeamScholarshipHolder = () => {
 
     let data1 = sectionData.team;
 
@@ -25,9 +25,9 @@ const Team = () => {
         const res = await axios.get("http://adit.ipvc.pt/backend/backend/api/user/list.php");
         
         //Aparecer apenas os collaborators
-        const collaborators = _.filter(res.data, {cargo: 'Collaborator'});
+        const scholarshipHolder = _.filter(res.data, {cargo: 'Scholarship Holder'});
 
-        setPosts(collaborators);
+        setPosts(scholarshipHolder);
         setLoading(false)
       };
   
@@ -54,7 +54,7 @@ const Team = () => {
                             <div className="col-lg-8 offset-lg-2">
                                 <SectionTitle subtitle ={data1.sectionHeading.subtitle} title={data1.sectionHeading.title} titleContent={data1.sectionHeading.content}/>
                                 <div className="offset-lg-1">
-                                    <button class="button" id="btnExecBoard" href="/about">Executive Board</button>
+                                    <button class="button" id="btnExecBoard">Executive Board</button>
                                     <button class="button" id="btnCollaborator" onClick={useEffect}>Collaborator</button>
                                     <button class="button" id="btnSchHolder">Scholarship Holder</button>
                                 </div>
@@ -72,5 +72,5 @@ const Team = () => {
     }
 
  
- export default Team;
+ export default TeamScholarshipHolder;
  
