@@ -1,14 +1,11 @@
 import React, { useState, useEffect} from "react";
 import axios from "axios";
 import SectionTitle from '../global-components/SectionTitle';
-import {sectionData} from './../../data/section.json'
-import ReactPaginate from 'react-paginate';
-import { useHistory } from "react-router-dom";
+import {sectionData} from './../../data/section.json';
 import Pagination from "../../data/Pagination.js";
 import Posts from "../../data/Posts.js";
 import _ from "lodash";
-import { when } from "jquery";
-
+import Button from 'react-bootstrap/Button'
 
 const TeamScholarshipHolder = () => {
 
@@ -48,15 +45,15 @@ const TeamScholarshipHolder = () => {
         return (
             <div>
                  {/* <!-- start team area --> */}
-                <section className={`team p-120 ${window.location.pathname === "/team-collaborator" ? "team-page" : 3}`}>
+                <section className={`team p-120 ${window.location.pathname === "/team-scholarship-holder" ? "team-page" : 3}`}>
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-8 offset-lg-2">
                                 <SectionTitle subtitle ={data1.sectionHeading.subtitle} title={data1.sectionHeading.title} titleContent={data1.sectionHeading.content}/>
                                 <div className="offset-lg-1">
-                                    <button class="button" id="btnExecBoard">Executive Board</button>
-                                    <button class="button" id="btnCollaborator" onClick={useEffect}>Collaborator</button>
-                                    <button class="button" id="btnSchHolder">Scholarship Holder</button>
+                                    <Button href="/team-executive-board" variant="outline-primary" size="lg">Executive Board</Button>
+                                    <Button href="/team-collaborator" variant="outline-primary" size="lg">Collaborator</Button>
+                                    <Button href="/team-scholarship-holder" variant="outline-primary" size="lg" active>Scholarship Holder</Button>
                                 </div>
                             </div>
                             <Posts posts={currentPosts} loading={loading} />
