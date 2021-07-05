@@ -50,10 +50,10 @@ const Team = () => {
                         <div className="row">
                             <div className="col-lg-8 offset-lg-2">
                                 <SectionTitle subtitle ={data1.sectionHeading.subtitle} title={data1.sectionHeading.title} titleContent={data1.sectionHeading.content}/>
-                                <div className="offset-lg-1">
-                                    <Button href="/team-executive-board" variant="outline-primary" size="lg">Executive Board</Button>
-                                    <Button href="/team-collaborator" variant="outline-primary" size="lg" active>Collaborator</Button>
-                                    <Button href="/team-scholarship-holder" variant="outline-primary" size="lg">Scholarship Holder</Button>
+                                <div className="offset-lg-1 ml-20">
+                                    <Button href="/team-executive-board" variant="outline-primary" size="lg" tag="button" style={{ margin: '20px' }}>Executive Board</Button>
+                                    <Button href="/team-collaborator" variant="outline-primary" size="lg" active style={{ margin: '20px' }}>Collaborator</Button>
+                                    <Button href="/team-scholarship-holder" variant="outline-primary" size="lg" style={{ margin: '20px' }}>Scholarship Holder</Button>
                                 </div>
                             </div>
                             <Posts posts={currentPosts} loading={loading} />

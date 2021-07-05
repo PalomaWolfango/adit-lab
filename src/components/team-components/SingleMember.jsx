@@ -12,7 +12,7 @@ const SingleMemberInfo = () => {
                     <h3>{data.memberInfo.name}</h3>
                     <p>{data.memberInfo.designation}</p>
                     <div className="social">
-                        <ul className="d-flex justify-content-center">
+                        {/* <ul className="d-flex justify-content-center">
                         <li>
                                     <Link to={data.memberInfo.socile.facebook}><i className="fab fa-facebook-f"></i></Link>
                                 </li>
@@ -26,7 +26,7 @@ const SingleMemberInfo = () => {
                             <li>
                                 <Link to={data.memberInfo.socile.linkdin}><i className="fab fa-linkedin-in"></i></Link>
                             </li>
-                        </ul>
+                        </ul> */}
                     </div>
                 </div>
             </div>

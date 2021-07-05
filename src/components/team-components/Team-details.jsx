@@ -7,7 +7,7 @@ const TeamDetailsInner = () => {
     return (
         <>
                 {/* <!-- start team details area --> */}
-    <section className="team-detail pt-120">
+    <section className="team-detail pt-120 mt-120">
         <div className="container">
             <div className="row">
                 <div className="col-lg-4">
