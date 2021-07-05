@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export const Posts = ({posts, loading}) => {
 
@@ -8,6 +9,7 @@ export const Posts = ({posts, loading}) => {
                 <h3 style={{marginTop:'300px', height:"100%"}}>Loading...</h3>
             </ul>);
     }
+    
 
     return (
         <div className="col-lg-12">
@@ -22,7 +24,10 @@ export const Posts = ({posts, loading}) => {
                                 </div>
                                 <div className="container col-lg-10">
                                     <div className="text mt-3 justify-content-center" style={{margin: '10px'}}>
-                                        <span style={{fontSize:'20px', color: 'darkblue'}}><b>{post.nome}</b></span>
+                                        <Link>
+                                            <span style={{fontSize:'20px', color: 'darkblue'}}><b>{post.nome}</b></span>
+                                        </Link>
+                                        {/* <span style={{fontSize:'20px', color: 'darkblue'}}><b>{post.nome}</b></span> */}
                                         <br></br>
                                         <span style={{fontSize:'13px', color: 'GrayText'}}>{post.cargo}</span>
                                         <br></br>
