@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { sectionData } from './../../data/section.json';
+import logoAdit from '../../images/logoBaixo.png';
+import logoIPVC from '../../images/logo_ipvc.png';
 
 const Footer =()=>{
     let data = sectionData.footer;
@@ -14,15 +16,15 @@ const Footer =()=>{
                         <section className="footer-top">
                             <div className="container">
                                 <div className="row col-120">
-                                        <img src={data.logos.logo1}/>
-                                        <img src={data.logos.logo2}/>
-                                        <div className="contacts col-3">
+                                        <img src={logoAdit}/>
+                                        <img src={logoIPVC}/>
+                                        <div className="contacts col-4 m-3 justify-content-center">
                                             <p>
                                                 <Link  to="/contact">
-                                                    <p><b>{data.contactUs}</b></p>
+                                                    <p style={{fontSize:"15px"}}><b>{data.contactUs}</b></p>
                                                 </Link>
-                                                <p>{data.titlePhone} {data.phoneNumber}</p>
-                                                <p>{data.titleEmail} {data.email}</p>
+                                                <p style={{fontSize:"12px"}}>{data.titlePhone} {data.phoneNumber}</p>
+                                                <p style={{fontSize:"12px"}}>{data.titleEmail} {data.email}</p>
                                             </p>
                                         </div>
                                 </div>

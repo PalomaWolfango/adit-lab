@@ -1,54 +1,68 @@
-import React from 'react';
+import React, { useState, useEffect} from "react";
+import axios from "axios";
 import { Link } from 'react-router-dom';
 import { sectionData } from './../../data/section.json';
+import { withRouter } from "react-router-dom";
 
-const SingleMemberInfo = () => {
-    let data = sectionData.teamDetails;
-    return (
-        <>
-            <div className="team-inner inner-shadow wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                <img src={data.memberInfo.image} className="img-fluid" alt="Team" />
-                <div className="fig-detail text-center">
-                    <h3>{data.memberInfo.name}</h3>
-                    <p>{data.memberInfo.designation}</p>
-                    <div className="social">
-                        {/* <ul className="d-flex justify-content-center">
+class SingleMemberInfo extends React.Component {
+
+    constructor() {
+        super();
+    
+        this.state = {
+          user: [],
+        };
+    }
+
+    componentDidMount = () => {
+        try {
+          axios.get("http://adit.ipvc.pt/backend/backend/api/user/single.php?id=37").then((response) => {
+            this.setState({
+                user: response.data,
+            });
+          });
+        } catch (error) {
+          console.error(error);
+        }
+      };
+
+    render(){
+        const data = sectionData.teamDetails;
+        const { user } = this.state;
+        return (
+            
+            <>
+                <div className="team-inner inner-shadow wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                    <img src={user.imagem} className="img-fluid" alt="Team" />
+                    <div className="fig-detail text-center">
+                        <h3>{user.nome}</h3>
+                        <p>{user.cargo}</p>
+                        
+                    </div>
+                </div>
+                <div className="team-inner inner-shadow wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                    <div className="single-item mt-md-30 personal-info">
+                        <div className="item-title">
+                            <h4>Contact</h4>
+                        </div>
+                        <ul>
                         <li>
-                                    <Link to={data.memberInfo.socile.facebook}><i className="fab fa-facebook-f"></i></Link>
-                                </li>
+                            <p><span>{user.email}</span></p>
+                        </li>
+
+                            {/* {data.personalInfo.singleInfo.map((item, i)=>{
                             
-                            <li>
-                                <Link to={data.memberInfo.socile.twitter}><i className="fab fa-twitter"></i></Link>
-                            </li>
-                            <li>
-                                <Link to={data.memberInfo.socile.insta}><i className="fab fa-instagram"></i></Link>
-                            </li>
-                            <li>
-                                <Link to={data.memberInfo.socile.linkdin}><i className="fab fa-linkedin-in"></i></Link>
-                            </li>
-                        </ul> */}
+                                return (
+                                    <li key={i}>
+                                    <p><span>{item.name}</span>{item.no}</p>
+                                </li>
+                                )
+                            })} */}
+                        </ul>
                     </div>
                 </div>
-            </div>
-            <div className="team-inner inner-shadow wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                <div className="single-item mt-md-30 personal-info">
-                    <div className="item-title">
-                        <h4>{data.personalInfo.title}</h4>
-                    </div>
-                    <ul>
-                        {data.personalInfo.singleInfo.map((item, i)=>{
-                           
-                            return (
-                                <li key={i}>
-                                <p><span>{item.name}</span>{item.no}</p>
-                            </li>
-                            )
-                        })}
-                    </ul>
-                </div>
-            </div>
-        </>
-    );
+            </>
+        );}
 }
 
-export default SingleMemberInfo;
+export default withRouter(SingleMemberInfo);

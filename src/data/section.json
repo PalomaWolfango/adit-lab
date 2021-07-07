@@ -79,6 +79,11 @@
                 "pageName": "Research Areas",
                 "background": "assets/images/home2/banner/teste.jpg"
             },
+            "news": {
+                "title": "News",
+                "pageName": "News",
+                "background": "assets/images/home2/banner/teste.jpg"
+            },
             "error": {
                 "title": "404 Page",
                 "pageName": "404",
@@ -965,7 +970,7 @@
         "footer": {
             "background": "assets/images/home1/footer/fundo.jpg",
             "logos": {
-                "logo1":"assets/images/home1/footer/logotipoB.png",
+                "logo1":"assets/images/home1/footer/logoBaixo.png",
                 "logo2": "assets/images/home1/logo_ipvc.png"
             },
             "contactUs": "Contact Us:",

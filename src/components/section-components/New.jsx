@@ -3,7 +3,7 @@ import SectionTitle from '../global-components/SectionTitle';
 import {sectionData} from './../../data/section.json'
 import {Link} from 'react-router-dom'
 
-const News = () => {
+const News2 = () => {
     let data = sectionData.news;   
     let publicUrl = process.env.PUBLIC_URL+'/'
     return (
@@ -12,9 +12,9 @@ const News = () => {
             <section className="blog p-120">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-8 offset-lg-2">
+                        {/* <div className="col-lg-8 offset-lg-2">
                         <SectionTitle subtitle ={data.sectionHeading.subtitle} title={data.sectionHeading.title} titleContent={data.sectionHeading.content}/>
-                        </div>
+                        </div> */}
                         <div className="col-lg-12">
                             <div className="row">
                                 <div className="col-lg-6">
@@ -89,4 +89,4 @@ const News = () => {
     );
 }
 
-export default News;
+export default News2;

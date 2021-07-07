@@ -1942,7 +1942,7 @@ footer .overlay {
   color: var(--main-blue);
 }
 .footer-bottom .footer-menu ul li {
-  padding-left: 30px;
+  padding-left: 50px;
 }
 .footer-bottom .footer-menu ul li:first-child {
   padding-left: 0;

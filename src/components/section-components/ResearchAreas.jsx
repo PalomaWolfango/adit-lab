@@ -14,12 +14,12 @@ const ResearchAreas = () => {
                     <div className="row">
                         {/* <!-- start research areas detail inner --> */}
                         {data.researchAreasDetails.map((item)=>{
-                            return <div className="col-lg-8 order-1 order-lg-0" align="justify">
-                                        <div className="detail-inner">
-                                            <h3 className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{item.title}</h3>
-                                            <p className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{item.content}</p>
-                                            <p className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{item.content2}</p>
-                                            <p className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{item.content3}</p>
+                            return <div className="col-lg-20" align="justify">
+                                        <div className="section-title wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".3s">
+                                            <h2 style={{color: '#2a3bd8;'}}><span>{item.title}</span></h2>
+                                            <p>{item.content}</p>
+                                            <p>{item.content2}</p>
+                                            <p>{item.content3}</p>
                                             <br></br>
                                         </div>
                                     </div>

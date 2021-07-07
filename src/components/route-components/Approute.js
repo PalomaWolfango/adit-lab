@@ -15,7 +15,7 @@ import ErrorPage from '../../page/Error.jsx'
 import ContactPage from '../../page/ContactPage';
 import BlogDetails from '../../page/BlogDetails';
 import ResearchAreasPage from '../../page/ResearchAreasPage';
-
+import NewsPage from '../../page/NewsPage';
 
 function AppRoute() {
 
@@ -31,11 +31,16 @@ function AppRoute() {
                 < Route path = '/team-executive-board' exact component = { TeamPageExecutiveBoard } />
                 < Route path = '/team-scholarship-holder' exact component = { TeamPageScholarshipHolder } />
                 < Route path = '/team-collaborator' exact component = { TeamPageCollaborator } />
-                < Route path = '/team-details' exact component = { TeamDetails } />
+                <Route
+  exact
+  path="/team-details/:user_id"
+  component={TeamDetails}
+/>
                 < Route path = '/pricing' exact component = { PricingPage } />
                 < Route path = '/contact' exact component = { ContactPage } />
                 < Route path = '/blog-details' exact component = { BlogDetails } />
                 < Route path = '/research-areas' exact component = { ResearchAreasPage } />
+                < Route path = '/news' exact component = { NewsPage } />
                 {/* < Route path = '*' exact component = { ErrorPage } /> */}
             </ Switch> 
         </ BrowserRouter>

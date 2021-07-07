@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { $ }  from 'react-jquery-plugin'
 
 export const Posts = ({posts, loading}) => {
 
@@ -9,13 +10,13 @@ export const Posts = ({posts, loading}) => {
                 <h3 style={{marginTop:'300px', height:"100%"}}>Loading...</h3>
             </ul>);
     }
-    
 
     return (
         <div className="col-lg-12">
             <div className="row justify-content-center">
                        
                 {posts.map(post =>{
+
                     return (
                         <div className={`col-lg-12 col-md-6 wow `} data-wow-duration="1.5s" data-wow-delay=".4s">
                             <div className="item">
@@ -24,7 +25,9 @@ export const Posts = ({posts, loading}) => {
                                 </div>
                                 <div className="container col-lg-10">
                                     <div className="text mt-3 justify-content-center" style={{margin: '10px'}}>
-                                        <Link>
+                                        <Link to={{ 
+                                            pathname: "/team-details/" + post.id
+                                        }}>
                                             <span style={{fontSize:'20px', color: 'darkblue'}}><b>{post.nome}</b></span>
                                         </Link>
                                         {/* <span style={{fontSize:'20px', color: 'darkblue'}}><b>{post.nome}</b></span> */}
@@ -38,6 +41,7 @@ export const Posts = ({posts, loading}) => {
                         </div>
                     );
                 })}
+
             </div>        
         </div>
     )

@@ -19,6 +19,7 @@
     "react-circular-progressbar": "^2.0.3",
     "react-countup": "^4.3.3",
     "react-dom": "^17.0.1",
+    "react-jquery-plugin": "^1.1.7",
     "react-masonry-component": "^6.2.1",
     "react-modal-video": "^1.2.6",
     "react-paginate": "^7.1.3",

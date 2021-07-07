@@ -1,117 +1,82 @@
-import React from 'react';
+import React, { useState, useEffect} from "react";
+import axios from "axios";
 import SingleMemberInfo from './SingleMember';
+import Posts from '././../../data/Posts.js';
 import { sectionData } from './../../data/section.json';
+import { withRouter } from "react-router-dom";
 
-const TeamDetailsInner = () => {
-    let data = sectionData.teamDetails;
-    return (
-        <>
-                {/* <!-- start team details area --> */}
-    <section className="team-detail pt-120 mt-120">
-        <div className="container">
-            <div className="row">
-                <div className="col-lg-4">
-                    <SingleMemberInfo />
-                </div>
+class TeamDetailsInner extends React.Component {
+    constructor() {
+        super();
+    
+        this.state = {
+          user: [],
+        };
+    }
 
-                <div className="col-lg-8">
-                    <div className="team-inner right-part">
-                        <div className="single-item wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                            <div className="item-title">
-                                <h4>{data.aboutInfo.title}</h4>
+    componentDidMount = () => {
+        try {
+          axios.get("http://adit.ipvc.pt/backend/backend/api/user/single.php?id=37").then((response) => {
+            this.setState({
+                user: response.data,
+            });
+          });
+        } catch (error) {
+          console.error(error);
+        }
+      };
+    
+
+    render(){
+        const data = sectionData.teamDetails;
+        const { user } = this.state;
+        return (
+            <>
+        {/* <!-- start team details area --> */}
+        <section className="team-detail pt-120 mt-120">
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-4">
+                        <SingleMemberInfo />
+                    </div>
+
+                    <div className="col-lg-8">
+                        <div className="team-inner right-part" style={{textAlign: 'justify', textJustify: 'inter-word'}}>
+                            <div className="single-item wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                                <div className="item-title">
+                                    <h4>{data.aboutInfo.title}</h4>
+                                    
+                                </div>
+                                {/* <p>
+                                    {{nome}}
+                                </p> */}
+                                <p className="item justify">
+                                {user.biografia}
+                                </p>
+                                {/* <p>{data.aboutInfo.content3}
+                                </p> */}
                             </div>
-                            <p>
-                                {data.aboutInfo.content}
-                            </p>
-                            <p>
-                            {data.aboutInfo.content2}
-                            </p>
-                            <p>{data.aboutInfo.content3}
-                            </p>
-                        </div>
-                        <div className="single-item mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                            <div className="item-title">
-                                <h4>{data.timeiInfo.title}</h4>
+                            <div className="single-item mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                                <div className="item-title">
+                                    <h4>Projects</h4>
+                                </div>
+                                
                             </div>
-                            <table className="table table-responsive" style={{width: "100%"}}>
-                                <thead>
-                                    <tr>
-                                        <th scope="col" style={{width: "50%"}}>
-                                            <p>day</p>
-                                        </th>
-                                        <th scope="col" style={{width: "50%"}}>
-                                            <p>time</p>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {data.timeiInfo.singleTime.map((item, i)=>{
-                                        return (
-                                            <tr key={i}>
-                                        <td>
-                                            <p>{item.dayName}</p>
-                                        </td>
-                                        <td>
-                                            <p>{item.dayTime}</p>
-                                        </td>
-                                    </tr>
-                                        )
-                                    })}
-                                </tbody>
-                            </table>
-                        </div>
-                        <div className="single-item mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                            <div className="item-title">
-                                <h4>experience</h4>
+                            <div className="single-item mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                                <div className="item-title">
+                                    <h4>Publications</h4>
+                                </div>
+                                
                             </div>
-                            <table className="table table-responsive" style={{width: "100%"}}>
-                                <thead>
-                                    <tr>
-                                        <th scope="col" style={{width: "25%"}}>
-                                            <p>year</p>
-                                        </th>
-                                        <th scope="col" style={{width: "30%"}}>
-                                            <p>department</p>
-                                        </th>
-                                        <th scope="col" style={{width: "25%"}}>
-                                            <p>position</p>
-                                        </th>
-                                        <th scope="col" style={{width: "20%"}}>
-                                            <p>company</p>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                {data.experienceInfo.singleExp.map((item, i)=>{
-                                        return (
-                                            <tr key={i}>
-                                                <td>
-                                                    <p>{item.year}</p>
-                                                </td>
-                                                <td>
-                                                    <p>{item.department}</p>
-                                                </td>
-                                                <td>
-                                                    <p>{item.position}</p>
-                                                </td>
-                                                <td>
-                                                    <p>{item.company}</p>
-                                                </td>
-                                            </tr>
-                                        )
-                                    })}
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    {/* <!-- end team details area --> */}
+        </section>
+        {/* <!-- end team details area --> */}
 
-        </>
-    );
+            </>
+        );}
 }
 
-export default TeamDetailsInner;
+export default withRouter(TeamDetailsInner);

@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
 import { sectionData } from './../../data/section.json';
+import logoCima from '../../images/logoCima.png';
 
 const NavigationMenu = () => {
     const [headerSearch, setHeaderSearch] = useState('');
@@ -16,8 +17,8 @@ const NavigationMenu = () => {
                 <div className="row">
                     <div className="col-lg-25">
                         <nav className="navbar p-0" style={{marginLeft: 'none'}}>
-                            <Link to="/" style={{width:'30%'}}>
-                                <img src={data.logo} alt="Logo"/>
+                            <Link to="/" style={{width:'24%'}}>
+                                <img src={logoCima} alt="Logo"/>
                             </Link>
                             <div className={`header-menu ml-auto position-static ${menuToggle === true ? 'menuToggle' : ''}`}>
                             <div id="menu-button"  onClick={()=>{setMobileMenuToggle(!mobileMenuToggle)}}><i className="fas fa-bars"></i></div>
@@ -60,6 +61,7 @@ const NavigationMenu = () => {
                                         </ul> */}
                                     </li>
                                     <li><Link to="#">publications</Link></li>
+                                    <li><Link to="/news">news</Link></li>
                                     <li><Link to="/research-areas">research areas</Link></li>
                                     <li><Link to="/contact">contacts</Link></li>
                                 </ul>
