@@ -6,8 +6,8 @@ export const Posts = ({posts, loading}) => {
 
     if(loading) {
         return (
-            <ul className="item justify-content-center"> 
-                <h3 style={{marginTop:'300px', height:"100%"}}>Loading...</h3>
+            <ul className="item"> 
+                <h3 style={{alignContent:'center', marginTop:'500px'}}>Loading...</h3>
             </ul>);
     }
 
@@ -26,7 +26,8 @@ export const Posts = ({posts, loading}) => {
                                 <div className="container col-lg-10">
                                     <div className="text mt-3 justify-content-center" style={{margin: '10px'}}>
                                         <Link to={{ 
-                                            pathname: "/team-details/" + post.id
+                                            pathname: "/team-details/" + post.id,
+                                            state: {userID: post.id}
                                         }}>
                                             <span style={{fontSize:'20px', color: 'darkblue'}}><b>{post.nome}</b></span>
                                         </Link>

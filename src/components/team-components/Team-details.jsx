@@ -16,7 +16,7 @@ class TeamDetailsInner extends React.Component {
 
     componentDidMount = () => {
         try {
-          axios.get("http://adit.ipvc.pt/backend/backend/api/user/single.php?id=37").then((response) => {
+          axios.get("http://adit.ipvc.pt/backend/backend/api/user/single.php?id=" + this.props.location.state.userID).then((response) => {
             this.setState({
                 user: response.data,
             });
@@ -24,7 +24,7 @@ class TeamDetailsInner extends React.Component {
         } catch (error) {
           console.error(error);
         }
-      };
+    };
     
 
     render(){
