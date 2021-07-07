@@ -88,6 +88,11 @@
                 "title": "404 Page",
                 "pageName": "404",
                 "background": "assets/images/404/404.jpg"
+            },
+            "projectDetails": {
+                "title": "Project Details",
+                "pageName": "Project Details",
+                "background": "assets/images/home2/banner/teste.jpg"
             }
         },
         "banner": {
@@ -586,84 +591,106 @@
         },
         "projectV2": {
             "sectionHeading": {
-                "subtitle":"Finished Project",
                 "title": "Recent Completed Projects",
-                "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinciunt consectetuer adipiscing elit, sed diam nonummy"
+                "content": "All the Projects are here."
             },
-                "singleProject": [
+            "member": [{
+                "id": 1,
+                "name": "Sara Paiva",
+                "designation": "Coordinator",
+                "image": "assets/images/home1/team/sarapaiva.png",
+                "animation":"fadeInRight"
+            },
+            {
+                "id": 2,
+                "name": "Sara Paiva",
+                "designation": "Coordinator",
+                "image": "assets/images/home1/team/sarapaiva.png",
+                "animation":"fadeInUp"
+            },
+            {
+                "id": 3,
+                "name": "Sara Paiva",
+                "designation": "Coordinator",
+                "image": "assets/images/home1/team/sarapaiva.png",
+                "animation":"fadeInLeft"
+            }
+        ]
+              
+        },
+        "projectDetails":{
+            "memberInfo":{
+                "image":"assets/images/home1/team/team-img1.jpg",
+                "name":"John N. Holmes",
+                "designation":"Architecture Designer",
+                "socile":{
+                    "facebook":"#!",
+                    "twitter":"#!",
+                    "insta":"#!",
+                    "linkdin":"#!"
+                }
+            },
+            "personalInfo":{
+                "title":"Personal Info",
+                "singleInfo":[
                     {
-                        "origin": ["Commercial", "Furniture"],
-                        "image": "assets/images/home2/project/img1.jpg",
-                        "category": "Commercial",
-                        "title": "We Are Digital Agency",
-                        "detailedTitle": "Electrical Wiring concept, San Jose",
-                        "value": "555",
-                        "completedYear": "2019",
-                        "location": "London Donec eleifend",
-                        "id": 7,
-                        "animation":"fadeInRight"
+                        "name":"Phone:",
+                        "no":"+ (123) 1800-567"
                     },
                     {
-                        "origin": ["Designer", "Commercial", "Interior"],
-                        "image": "assets/images/home2/project/img2.jpg",
-                        "category": "Designer",
-                        "title": "We Are Digital Agency",
-                        "detailedTitle": "Electrical Wiring concept, San Jose",
-                        "value": "559",
-                        "completedYear": "2019",
-                        "location": "London Donec eleifend",
-                        "id": 8,
-                        "animation":"fadeInUp"
+                        "name":"Office:",
+                        "no":"+ (123) 1800-567"
                     },
                     {
-                        "origin": ["Designer", "Exterior"],
-                        "image": "assets/images/home2/project/img3.jpg",
-                        "category": "Exterior",
-                        "title": "We Are Digital Agency",
-                        "detailedTitle": "Electrical Wiring concept, San Jose",
-                        "value": "558",
-                        "completedYear": "2018",
-                        "location": "London Donec eleifend",
-                        "id": 9,
-                        "animation":"fadeInLeft"
+                        "name":"E-mail:",
+                        "no":"medilink@tlprt.com"
                     },
                     {
-                        "origin": ["Furniture", "Interior", "Exterior"],
-                        "image": "assets/images/home2/project/img4.jpg",
-                        "category": "Furniture",
-                        "title": "We Are Digital Agency",
-                        "detailedTitle": "Electrical Wiring concept, San Jose",
-                        "value": "5553",
-                        "completedYear": "2019",
-                        "location": "London Donec eleifend",
-                        "id": 10,
-                        "animation":"fadeInRight"
-                    },
-                    {
-                        "origin": ["Interior", "Exterior", "Designer"],
-                        "image": "assets/images/home2/project/img5.jpg",
-                        "category": "Interior",
-                        "title": "We Are Digital Agency",
-                        "detailedTitle": "Electrical Wiring concept, San Jose",
-                        "value": "5505",
-                        "completedYear": "2020",
-                        "location": "London Donec eleifend",
-                        "id": 11,
-                        "animation":"fadeInDown"
-                    },
-                    {
-                        "origin": ["Commercial", "Furniture"],
-                        "image": "assets/images/home2/project/img6.jpg",
-                        "category": "Furniture",
-                        "title": "We Are Digital Agency",
-                        "detailedTitle": "Electrical Wiring concept, San Jose",
-                        "value": "5055",
-                        "completedYear": "2019",
-                        "location": "London Donec eleifend",
-                        "id": 12,
-                        "animation":"fadeInLeft"
+                        "name":"Gender:",
+                        "no":"Male"
                     }
                 ]
+            },
+            "aboutInfo":{
+                "title":"About",
+                "content":"Experience architecture (XA) is the art of articulating a clear user story/journey through an inform,",
+                "content2":"interaction design and experience design that an end user navigates across offered by the client",
+                "content3":"This visual representation is intended not only to highlight the system that the user will touch."
+            },
+            "timeiInfo":{
+                "title":"Working Time",
+                "singleTime":[
+                    {
+                        "dayName":"SUN",
+                        "dayTime":"11:30AM - 12:30PM"
+                    },
+                    {
+                        "dayName":"THU",
+                        "dayTime":"12:00AM - 05:00PM"
+                    },
+                    {
+                        "dayName":"MON",
+                        "dayTime":"02:00AM - 07:30PM"
+                    }
+                ]
+            },
+            "experienceInfo":{
+                "title":"Experience",
+                "singleExp":[
+                    {
+                        "year":"2007 - 2008",
+                        "department":"Civil Engineer",
+                        "position":"Senior Designer",
+                        "company":"Midtown Group"
+                    },
+                    {
+                        "year":"2009 - 2014",
+                        "department":"Architecture Designer",
+                        "position":"Senior Designer",
+                        "company":"Landmark Group"
+                    }
+                ]
+            }
         },
         
         "client": {

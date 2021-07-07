@@ -3,24 +3,29 @@ import Footer from '../components/global-components/Footer';
 import Layouts from '../components/global-components/Layouts';
 import Connect from '../components/section-components/Connect';
 import HeaderV3 from '../components/section-components/Header-v3';
-import ProjectV2 from '../components/section-components/Project-v2';
+import ProjectDetailsInner from '../components/project-components/Project-details';
 import { sectionData } from './../data/section.json';
 
-
-const ProjectPage = () => {
+const ProjectDetails = () => {
     let data = sectionData.sectionTitle;
     useEffect(() => {
         window.scrollTo(0,0);
 }, [])
     return (
         <>
-            <Layouts pageTitle='Project'>
-                <HeaderV3  background={data.project.background} title={data.project.title} pageName={data.project.pageName}/>
-                <ProjectV2 />
+            <Layouts  pageTitle='Project Details'>
+                <HeaderV3 background={data.projectDetails.background} title={data.projectDetails.title} pageName={data.projectDetails.pageName} />
+                 <ProjectDetailsInner />
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
                 <Footer />
             </Layouts>
         </>
     );
 }
 
-export default ProjectPage;
+export default ProjectDetails;

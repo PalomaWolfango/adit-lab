@@ -44,7 +44,7 @@ const NavigationMenu = () => {
                                     </li>
                                     <li>
                                     {/* <Link to="/project">project</Link> */}
-                                    <Link to="#">project</Link>
+                                    <Link to="/project">project</Link>
                                         {/* <ul>
                                             <li><Link to="/about">about us</Link></li>
                                             <li><Link to="/service">service</Link></li>
