@@ -11,9 +11,9 @@ const ProjectV2 = () => {
             <section className={`project pt-120 pb-90 project-style2 ${window.location.pathname === '/project' ? " ": "bg-blue"}`}>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-8 offset-lg-2">
+                      {/*   <div className="col-lg-8 offset-lg-2">
                         <SectionTitle subtitle ={data.sectionHeading.subtitle} title={data.sectionHeading.title} titleContent={data.sectionHeading.content}/>
-                        </div>
+                        </div> */}
                         <div className="col-lg-12">
                             <div className="row">
                                 {}
