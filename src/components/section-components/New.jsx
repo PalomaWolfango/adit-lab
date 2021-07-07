@@ -9,13 +9,13 @@ const News2 = () => {
     return (
         <>
             {/* <!-- start blog area --> */}
-            <section className="blog p-120">
+            {/* <section className="blog p-120">
                 <div className="container">
-                    <div className="row">
+                    <div className="row"> */}
                         {/* <div className="col-lg-8 offset-lg-2">
                         <SectionTitle subtitle ={data.sectionHeading.subtitle} title={data.sectionHeading.title} titleContent={data.sectionHeading.content}/>
                         </div> */}
-                        <div className="col-lg-12">
+                       {/*  <div className="col-lg-12">
                             <div className="row">
                                 <div className="col-lg-6">
                                     <div className="item item-big wow fadeInRight" style={{background:`url(${publicUrl}assets/images/home1/blog/blog1.jpg)`}} data-wow-duration="1.5s" data-wow-delay=".4s">
@@ -33,8 +33,8 @@ const News2 = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="col-lg-6">
+                                </div> */}
+                                {/* <div className="col-lg-6">
                                     <div className="row">
                                         <div className="col-lg-12 mt-md-20">
                                             <div className="item wow fadeInLeft" style={{background:`url(${publicUrl}assets/images/home1/blog/blog2.jpg)`}}  data-wow-duration="1.5s" data-wow-delay=".4s">
@@ -82,8 +82,8 @@ const News2 = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </div> */}
+            {/* </section> */}
             {/* <!-- end blog area --> */}
         </>
     );

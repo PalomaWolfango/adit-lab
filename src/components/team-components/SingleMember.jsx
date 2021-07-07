@@ -16,7 +16,6 @@ class SingleMemberInfo extends React.Component {
 
     componentDidMount = () => {
         try {
-            console.log(this);
           axios.get("http://adit.ipvc.pt/backend/backend/api/user/single.php?id="+this.props.location.state.userID).then((response) => {
             this.setState({
                 user: response.data,
@@ -50,15 +49,6 @@ class SingleMemberInfo extends React.Component {
                         <li>
                             <p><span>{user.email}</span></p>
                         </li>
-
-                            {/* {data.personalInfo.singleInfo.map((item, i)=>{
-                            
-                                return (
-                                    <li key={i}>
-                                    <p><span>{item.name}</span>{item.no}</p>
-                                </li>
-                                )
-                            })} */}
                         </ul>
                     </div>
                 </div>

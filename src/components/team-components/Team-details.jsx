@@ -47,14 +47,9 @@ class TeamDetailsInner extends React.Component {
                                     <h4>{data.aboutInfo.title}</h4>
                                     
                                 </div>
-                                {/* <p>
-                                    {{nome}}
-                                </p> */}
                                 <p className="item justify">
-                                {user.biografia}
+                                    {user.biografia}
                                 </p>
-                                {/* <p>{data.aboutInfo.content3}
-                                </p> */}
                             </div>
                             <div className="single-item mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                 <div className="item-title">
