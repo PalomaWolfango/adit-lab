@@ -26,6 +26,10 @@ const News = () => {
            <br></br>
            <br></br>
            <br></br>
+           <br></br>
+           <br></br>
+           <br></br>
+           <br></br>
            <Footer />
        </Layouts>
     );
