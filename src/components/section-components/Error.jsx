@@ -17,7 +17,7 @@ const ErrorInner = () => {
                     <div className="row">
                         <div className="col-lg-6 offset-lg-3">
                             <div className="banner-text text-center wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                                <h1>404</h1>
+                                {/* <h1>404</h1> */}
                                 <h3>page not found</h3>
                                 <p>The page you are looking for might have been removed had its name changed or is temporarily unavailable.</p>
                                 <Link to="/" className="btn-style"><span>Go to home</span></Link>
