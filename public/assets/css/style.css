@@ -1366,114 +1366,188 @@ section.team.team-page .col-lg-4.col-md-6{
     13: project
 ===========================================================*/
 
-.project .item {
-  position: relative;
-  overflow: hidden;
+.project {
+  padding-bottom: 200px;
 }
-.project .item:after {
+
+
+.project .item .container{
+  border: 5px solid gray;
+  border-top: white;
+  border-left: white;
+  border-right: white;
+  margin-bottom: 65px;
+  margin-left: 25%;
+  width: 80%;
+  height: 225px;
+  margin-top: -250px;
+}
+.project .item .image {
+  width:  225px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 30px;
+  position: relative;
+  z-index: 9;
+}
+.project .item .image img {
+  width: 100%;
+}
+.project .item .image .overlay {
+  height: 100%;
+  width: 100%;
+  background: hsla(0, 0%, 0%, 0.15);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.project .item .image .overlay ul {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  left: 0;
+  -webkit-transform: translateY(60px);
+  -moz-transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  -o-transform: translateY(60px);
+  transform: translateY(60px);
+  -webkit-transition: all linear 0.2s;
+  -moz-transition: all linear 0.2s;
+  -ms-transition: all linear 0.2s;
+  -o-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+}
+.project .item .image .overlay ul li {
+  padding: 0 8px;
+}
+.project .item .image .overlay ul li a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #fff;
+  text-align: center;
+  line-height: 40px;
+  z-index: 1;
+  position: relative;
+}
+.project .item .image .overlay ul li a i {
+  color: #192fab;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+.project .item .image .overlay ul li a:before {
   content: "";
   height: 100%;
   width: 100%;
-  background: hsla(0, 0%, 0%, 0.34);
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: var(--primary-color);
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transition: all linear 0.3s;
-  -moz-transition: all linear 0.3s;
-  -ms-transition: all linear 0.3s;
-  -o-transition: all linear 0.3s;
-  transition: all linear 0.3s;
+  z-index: -1;
   opacity: 0;
-}
-.project .item img {
-  width: 100%;
-}
-.project .item .action {
-  height: 100px;
-  width: 290px;
-  background: var(--primary-color);
-  padding: 20px 30px;
-  position: absolute;
-  left: 0;
-  bottom: -100px;
   -webkit-transition: all linear 0.3s;
   -moz-transition: all linear 0.3s;
   -ms-transition: all linear 0.3s;
   -o-transition: all linear 0.3s;
   transition: all linear 0.3s;
-  z-index: 9;
 }
-.project .item:hover .action {
-  bottom: 0;
-}
-.project .item:hover:after {
+.project .item .image .overlay ul li a:hover:before {
   opacity: 1;
 }
-.project .item .action span {
-  display: inline-block;
-  font-family: "Heebo", sans-serif;
-  text-transform: capitalize;
+.project .item .image .overlay ul li a:hover i {
   color: #fff;
-  font-size: 17px;
-  line-height: 26px;
-  font-weight: 400;
 }
-.project .item .action h6 {
-  color: #fff;
-  font-family: "Heebo", sans-serif;
-  font-weight: 700;
-  text-transform: capitalize;
-  padding-top: 5px;
-  font-size: 18px;
+.project .item:hover .image .overlay ul {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
 }
-.project .item .action a {
-  display: inline-block;
-  height: 35px;
-  width: 40px;
-  line-height: 35px;
-  background: #fff;
-  color: var(--main-blue);
-  text-align: center;
+.project .item .shape {
+  height: 450px;
+  width: 215px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  background: var(--primary-color);
   position: absolute;
   top: 0;
-  right: 0;
+  left: 40px;
 }
-.project .item .action a:hover {
-  background: var(--main-blue);
+.project .item .shape .text {
+  position: absolute;
+  bottom: 15px;
+  left: 40px;
+  margin: 10px;
+}
+.project .item .shape a {
+  text-transform: capitalize;
   color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
 }
-.project .single-items{
-  display: grid;
-  grid-gap:30px;
-  grid-template-rows: repeat(3, 360px);
-  grid-template-columns: repeat(6, 1fr);
+.project .item .shape span {
+  display: block;
+  text-transform: capitalize;
+  color: #fff;
+  font-family: "Heebo", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 }
-.project .single-items .single-item-1{
-  grid-area: 1 / 1 / 2 / 3;
+/* .project-style2 .item{
+  margin-bottom: 30px;
+} */
+section.project.project-page {
+  padding-bottom: 90px;
 }
-.project .single-items .single-item-2{
-  grid-area: 1 / 3 / 2 / 5;
+section.project.project-page .col-lg-4.col-md-6{
+  margin-bottom: 113px;
 }
-.project .single-items .single-item-3{
-  grid-area: 1 / 5 / 2 / -1;
+
+
+/*=========================================================
+    13.1: project page
+===========================================================*/
+.project-page.project .reverse .image {
+  margin-left: 25px;
+  padding: 20px;
+  width: 50%;
 }
-.project .single-items .single-item-4{
- grid-area: 2 / 1 / 3 / 5;
+.project-page.project .reverse .shape {
+  left: auto;
+  right: 30px;
 }
-.project .single-items .single-item-5{
- grid-area: 2 / 5 / 3 / -1;
+
+.project-page.project.button {
+    height: 50px;
+    width: 180px;
+    border: 2px solid var(--dark-blue);
+    border-radius: 5px;
+    background-color: white;
+    color: var(--dark-blue);
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    margin-left: 30px;
 }
-.project .single-items .single-item-6{
-  grid-row: 3 / 4;
-  grid-column: 1 / 4;
+
+.project-page.project.button:hover {
+  background: var(--dark-blue);
+  color: white;
 }
-.project .single-items .single-item-7{
-  grid-row: 3 / 6;
-  grid-column: 4 / -1;
-}
-section.project.p-120 {
-  padding-bottom: 60px;
-}
+
+
 /*=========================================================
     14: client
 ===========================================================*/

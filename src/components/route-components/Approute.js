@@ -16,6 +16,7 @@ import ContactPage from '../../page/ContactPage';
 import BlogDetails from '../../page/BlogDetails';
 import ResearchAreasPage from '../../page/ResearchAreasPage';
 import NewsPage from '../../page/NewsPage';
+import ProjectDetails from '../../page/ProjectDetails';
 
 function AppRoute() {
 
@@ -28,6 +29,8 @@ function AppRoute() {
                 < Route path = '/service' exact component = { ServicePage } />
                 < Route path = '/service-details' exact component = { ServiceDetails } />
                 < Route path = '/project' exact component = { ProjectPage } />
+                {/* < Route path = '/project-details' exact component = { ProjectDetails } /> */}
+                < Route exact path="/project-details/:project_id" component={ ProjectDetails }/>
                 < Route path = '/team-executive-board' exact component = { TeamPageExecutiveBoard } />
                 < Route path = '/team-scholarship-holder' exact component = { TeamPageScholarshipHolder } />
                 < Route path = '/team-collaborator' exact component = { TeamPageCollaborator } />
