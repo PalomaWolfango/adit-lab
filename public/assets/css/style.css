@@ -1372,7 +1372,7 @@ section.team.team-page .col-lg-4.col-md-6{
 
 
 .project .item .container{
-  border: 5px solid gray;
+  border: 5px solid grey;
   border-top: white;
   border-left: white;
   border-right: white;
@@ -3267,3 +3267,185 @@ footer.error-page {
   color: white;
   border-radius: 3px;
 }
+/*=========================================================
+    27: publications
+===========================================================*/
+
+.publications {
+  padding-bottom: 200px;
+}
+
+
+.publications .item .container{
+  border: 5px solid gray;
+  border-top: white;
+  border-left: white;
+  border-right: white;
+  margin-bottom: 65px;
+  width: 100%;
+  height: 225px;
+}
+.publications .item .image {
+  width:  225px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 30px;
+  position: relative;
+  z-index: 9;
+}
+.publications .item .image img {
+  width: 100%;
+}
+.publications .item .image .overlay {
+  height: 100%;
+  width: 100%;
+  background: hsla(0, 0%, 0%, 0.15);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.publications .item .image .overlay ul {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  left: 0;
+  -webkit-transform: translateY(60px);
+  -moz-transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  -o-transform: translateY(60px);
+  transform: translateY(60px);
+  -webkit-transition: all linear 0.2s;
+  -moz-transition: all linear 0.2s;
+  -ms-transition: all linear 0.2s;
+  -o-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+}
+.publications .item .image .overlay ul li {
+  padding: 0 8px;
+}
+.publications .item .image .overlay ul li a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #fff;
+  text-align: center;
+  line-height: 40px;
+  z-index: 1;
+  position: relative;
+}
+.publications .item .image .overlay ul li a i {
+  color: #192fab;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+.publications .item .image .overlay ul li a:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: var(--primary-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+.publications .item .image .overlay ul li a:hover:before {
+  opacity: 1;
+}
+.publications .item .image .overlay ul li a:hover i {
+  color: #fff;
+}
+.publications .item:hover .image .overlay ul {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+.publications .item .shape {
+  height: 450px;
+  width: 215px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  background: var(--primary-color);
+  position: absolute;
+  top: 0;
+  left: 40px;
+}
+.publications .item .shape .text {
+  position: absolute;
+  bottom: 15px;
+  left: 40px;
+  margin: 10px;
+}
+.publications .item .shape a {
+  text-transform: capitalize;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+}
+.publications .item .shape span {
+  display: block;
+  text-transform: capitalize;
+  color: #fff;
+  font-family: "Heebo", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+.project-style2 .item{
+  margin-bottom: 30px;
+}
+section.publications.publications-page {
+  padding-bottom: 90px;
+}
+section.publications .col-lg-4.col-md-6{
+  margin-bottom: 113px;
+}
+
+/*=========================================================
+    27.1: publications page
+===========================================================*/
+.publications-page.publications .reverse .image {
+  margin-left: 25px;
+  padding: 20px;
+  width: 50%;
+}
+.publications-page.publications .reverse .shape {
+  left: auto;
+  right: 30px;
+}
+
+.publications-page.publications.button {
+    height: 50px;
+    width: 180px;
+    border: 2px solid var(--dark-blue);
+    border-radius: 5px;
+    background-color: white;
+    color: var(--dark-blue);
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    margin-left: 30px;
+}
+
+.publications-page.publications.button:hover {
+  background: var(--dark-blue);
+  color: white;
+}
+

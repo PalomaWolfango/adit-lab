@@ -93,6 +93,11 @@
                 "title": "Project Details",
                 "pageName": "Project Details",
                 "background": "assets/images/home2/banner/teste.jpg"
+            },
+            "publications": {
+                "title": "Publications",
+                "pageName": "Publications",
+                "background": "assets/images/home2/banner/teste.jpg"
             }
         },
         "banner": {
@@ -691,6 +696,35 @@
                     }
                 ]
             }
+        },
+        "publications": {
+            "sectionHeading": {
+                "title": "Publications",
+                "content": "All the Publications are here."
+            },
+            "member": [{
+                "id": 1,
+                "name": "Sara Paiva",
+                "designation": "Coordinator",
+                "image": "assets/images/home1/team/sarapaiva.png",
+                "animation":"fadeInRight"
+            },
+            {
+                "id": 2,
+                "name": "Sara Paiva",
+                "designation": "Coordinator",
+                "image": "assets/images/home1/team/sarapaiva.png",
+                "animation":"fadeInUp"
+            },
+            {
+                "id": 3,
+                "name": "Sara Paiva",
+                "designation": "Coordinator",
+                "image": "assets/images/home1/team/sarapaiva.png",
+                "animation":"fadeInLeft"
+            }
+        ]
+              
         },
         
         "client": {

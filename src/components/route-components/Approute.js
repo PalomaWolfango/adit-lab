@@ -17,6 +17,7 @@ import BlogDetails from '../../page/BlogDetails';
 import ResearchAreasPage from '../../page/ResearchAreasPage';
 import NewsPage from '../../page/NewsPage';
 import ProjectDetails from '../../page/ProjectDetails';
+import PublicationPage from '../../page/Publications';
 
 function AppRoute() {
 
@@ -44,6 +45,7 @@ function AppRoute() {
                 < Route path = '/blog-details' exact component = { BlogDetails } />
                 < Route path = '/research-areas' exact component = { ResearchAreasPage } />
                 < Route path = '/news' exact component = { NewsPage } />
+                < Route path = '/publications' exact component = { PublicationPage } />
                 {/* < Route path = '*' exact component = { ErrorPage } /> */}
             </ Switch> 
         </ BrowserRouter>
