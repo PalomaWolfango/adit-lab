@@ -5,8 +5,7 @@ import SectionTitle from '../global-components/SectionTitle';
 import Pagination from "../../data/PaginationPublication.js";
 import Publication from "../../data/Publication.js";
 import _ from "lodash";
-import {Navigation} from 'react-minimal-side-navigation';
-import 'react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css';
+
 
 const Publications = () => {
 
