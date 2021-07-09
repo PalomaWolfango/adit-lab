@@ -38,21 +38,66 @@ class SingleProjectInfo extends React.Component {
                     {/* <img src={user.imagem} className="img-fluid" alt="Team" /> */}
                     <div className="fig-detail text-center">
                         <h3>{user.title}</h3>
+                        <p>{user.title}</p>  // tipo de projeto
+                        <p>{user.title}</p>  // Estado de projeto
                         
                     </div>
                 </div>
-                {/* <div className="team-inner inner-shadow wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                 <div className="team-inner inner-shadow wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                 <div className="single-item mt-md-30 personal-info">
+                        <div className="item-title">
+                            <h4>State</h4>
+                        </div> 
+                         <ul>
+                        <li>
+                            <p><span>{user.body}</span></p>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                        </li>
+                        </ul> 
+                     </div> 
                     <div className="single-item mt-md-30 personal-info">
                         <div className="item-title">
-                            <h4>Contact</h4>
-                        </div> */}
-                        {/* <ul>
+                            <h4>Funded By</h4>
+                        </div> 
+                         <ul>
                         <li>
-                            <p><span>{user.email}</span></p>
+                            <p><span>{user.body}</span></p>
+                            <br></br>
+                            <br></br>
+                            <br></br>
                         </li>
-                        </ul> */}
-                    {/* </div>
-                </div> */}
+                        </ul> 
+                     </div>  
+                     <div className="single-item mt-md-30 personal-info">
+                        <div className="item-title">
+                            <h4>Duration</h4>
+                        </div> 
+                         <ul>
+                        <li>
+                            <p><span>{user.body}</span></p>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                        </li>
+                        </ul> 
+                     </div>   
+                     <div className="single-item mt-md-30 personal-info">
+                        <div className="item-title">
+                            <h4>Budget</h4>
+                        </div> 
+                         <ul>
+                        <li>
+                            <p><span>{user.body}</span></p>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                        </li>
+                        </ul> 
+                     </div>   
+                </div> 
+                
             </>
         );}
 }

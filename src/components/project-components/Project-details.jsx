@@ -55,7 +55,7 @@ class ProjectDetailsInner extends React.Component {
                             </div>
                              <div className="single-item mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                 <div className="item-title">
-                                    <h4>Projects</h4>
+                                    <h4>Team</h4>
                                 </div>
                                 <p className="item justify">
                                     {user.body}
@@ -64,6 +64,14 @@ class ProjectDetailsInner extends React.Component {
                             <div className="single-item mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                 <div className="item-title">
                                     <h4>Publications</h4>
+                                </div>
+                                <p className="item justify">
+                                    {user.body}
+                                </p>  
+                            </div>
+                            <div className="single-item mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                                <div className="item-title">
+                                    <h4>Theses</h4>
                                 </div>
                                 <p className="item justify">
                                     {user.body}
