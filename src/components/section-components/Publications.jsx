@@ -15,7 +15,7 @@ const Publications = () => {
     const [publication, setPublication] = useState([]);
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [publicationPerPage] = useState(15);
+    const [publicationPerPage] = useState(20);
 
     useEffect(() => {
         const fetchPublication = async () => {

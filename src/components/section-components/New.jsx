@@ -8,7 +8,7 @@ import axios from "axios";
 
 class News2 extends Component {
 
-    constructor() {
+    /* constructor() {
         super();
 
         this.state = {
@@ -43,7 +43,7 @@ class News2 extends Component {
         }
 
             
-    }
+    } */
 
     render() {
 
@@ -51,15 +51,15 @@ class News2 extends Component {
     /* let data = sectionData.news;   
     let publicUrl = process.env.PUBLIC_URL+'/' */
 
-    const { dados, dadosTeam, count} = this.state;
+   /*  const { dados, dadosTeam, count} = this.state;
     console.log(dadosTeam[0]);
-    
+     */
    return(
         <>
 
-        {dadosTeam.map(item => {
+        {/* {dadosTeam.map(item => {
             return (<h1>{item.email}</h1>);
-        })}
+        })} */}
            
         </>
     )
