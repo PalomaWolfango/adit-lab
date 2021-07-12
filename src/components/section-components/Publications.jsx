@@ -4,6 +4,7 @@ import {sectionData} from './../../data/section.json'
 import SectionTitle from '../global-components/SectionTitle';
 import Pagination from "../../data/PaginationPublication.js";
 import Publication from "../../data/Publication.js";
+import SideBar from '../blog-components/SideBar';
 import _ from "lodash";
 
 
@@ -14,14 +15,14 @@ const Publications = () => {
     const [publication, setPublication] = useState([]);
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [publicationPerPage] = useState(6);
+    const [publicationPerPage] = useState(15);
 
     useEffect(() => {
         const fetchPublication = async () => {
           setLoading(true);
-          const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
+          const res = await axios.get("http://adit.ipvc.pt/backend/backend/api/article/simple/list.php");
 
-          setPublication(res.data);
+          setPublication(res.data.data);
           setLoading(false)
 
         }
@@ -48,6 +49,7 @@ const Publications = () => {
                         <div className="col-lg-8 offset-lg-2">
                             <SectionTitle subtitle ={data.sectionHeading.subtitle} title={data.sectionHeading.title} titleContent={data.sectionHeading.content}/>
                         </div>
+                        {/* <div className="blog-sidebar"><SideBar /></div> */}
                         <Publication publication={currentPublication} loading={loading} />
                         <div className="col-lg-8 offset-lg-2">
                             <Pagination publicationPerPage={publicationPerPage} totalPublication={publication.length} paginate={paginate}/> 
