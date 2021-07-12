@@ -94,7 +94,7 @@ const ProjectV2 = () => {
                     <div className="team-inner right-part" style={{textAlign: 'justify', textJustify: 'inter-word'}}>
                     <div className="item-title"> 
                         <h5>Filter:</h5>
-                        <ColoredLine color="darkblue" />
+                        <ColoredLine color= '#2a3bd8' />
                         <h2 onClick={setFilter} className="item justify" style={{fontSize:'20px', color: 'darkblue'}}>
                         <span style={{fontSize:'18px', color: 'black', 'fontWeight': activeFilter === 'National' ? 'bold' : 'normal'}}>National</span></h2>             
                         <h2 onClick={setFilter} className="item justify" style={{fontSize:'20px', color: 'darkblue'}}>
