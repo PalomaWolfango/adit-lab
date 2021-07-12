@@ -36,7 +36,7 @@ class SingleMemberInfo extends React.Component {
                     <img src={user.imagem} className="img-fluid" alt="Team" />
                     <div className="fig-detail text-center">
                         <h3>{user.nome}</h3>
-                        <p>{user.cargo}</p>
+                        <p>{this.props.location.state.userCargo}</p>
                         
                     </div>
                 </div>

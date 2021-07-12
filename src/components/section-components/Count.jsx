@@ -14,8 +14,7 @@ const Count = () => {
             <section className="count pt-90 bg-blue">
                 <div className="container">
                     <div className="row">
-                        {
-                            data.singleCount.map((item)=>{
+                        {data.singleCount.map((item)=>{
                                 return (
                                     
                                     <div className="col-lg-3 col-md-6">
