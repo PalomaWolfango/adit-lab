@@ -18,7 +18,7 @@ const ProjectV2 = () => {
     useEffect(() => {
         const fetchFrames = async () => {
           setLoading(true);
-          const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
+          const res = await axios.get("http://adit.ipvc.pt/backend/backend/api/project/list.php");
 
           setFrames(res.data);
           setLoading(false)

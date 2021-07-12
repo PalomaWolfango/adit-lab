@@ -29,16 +29,19 @@ export const Frames = ({frames, loading}) => {
                                             pathname: "/project-details/" + post.id,
                                             state: {projectID: post.id}
                                         }}>
-                                            <span style={{fontSize:'20px', color: 'darkblue'}}><b>{post.title}</b></span>
+                                            <span style={{fontSize:'20px', color: 'darkblue'}}><b>{post.nome}</b></span>
                                         </Link>
                                         <br></br>
+                                        <span style={{fontSize:'13px', color: 'GrayText'}}>{post.tipo}</span>
                                         <br></br>
-                                        <span style={{fontSize:'13px', color: 'GrayText'}}>{post.body}</span>
+                                        <span>{post.descr}</span>
                                         <br></br>
                                         <br></br>
                                         <label style={{fontSize:'15px', color: '#53565At'}}  for="FundeBy"><b>Funded By:</b></label>
+                                        <span style={{marginLeft:"10px"}}>{post.funded_by}</span>
                                         <br></br>
-                                        <label style={{fontSize:'15px', color: '#53565At'}} for="Duration"><b>Duration:</b></label>
+                                        <label style={{fontSize:'15px', color: '#53565At'}} for="Duration"><b>Budget:</b></label>
+                                        <span style={{marginLeft:"10px"}}>{post.budget}</span>
                                         <br></br>
                                      
                                         </div>

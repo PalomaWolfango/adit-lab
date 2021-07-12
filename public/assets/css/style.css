@@ -1372,7 +1372,7 @@ section.team.team-page .col-lg-4.col-md-6{
 
 
 .project .item .container{
-  border: 5px solid grey;
+  border: 5px solid lightgrey;
   border-top: white;
   border-left: white;
   border-right: white;
@@ -1386,7 +1386,6 @@ section.team.team-page .col-lg-4.col-md-6{
   width:  225px;
   height: 225px;
   object-fit: cover;
-  border-radius: 15px;
   overflow: hidden;
   margin: 30px;
   position: relative;
@@ -2693,8 +2692,8 @@ footer .overlay {
   text-transform: uppercase;
 }
 .team-detail .team-inner .single-item.personal-info {
-  margin-top: 30px;
-  padding: 30px;
+  margin-top: 15px;
+  padding: 15px;
 }
 /*=========================================================
     23: service details page
