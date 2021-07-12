@@ -3,35 +3,44 @@ import axios from "axios";
 import SingleProjectInfo from './SingleProject';
 import Frame from '../../data/Frame';
 import { sectionData } from '../../data/section.json';
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 class ProjectDetailsInner extends React.Component {
     constructor() {
         super();
     
         this.state = {
-          user: [],
+          project: [],
+          projectTeam: [],
         };
     }
 
     componentDidMount = () => {
         
         try {
-          axios.get("https://jsonplaceholder.typicode.com/posts/" + this.props.location.state.projectID).then((response) => {
+          axios.get("http://adit.ipvc.pt/backend/backend/api/project/single.php?id=" + this.props.location.state.projectID).then((response) => {
             this.setState({
-                user: response.data,
+                project: response.data,
+                projectTeam: response.data.team,
+               
+                  
             });
+            
             
           });
         } catch (error) {
           console.error(error);
         }
     };
+
+    
     
 
     render(){
         const data = sectionData.projectDetails;
-        const { user } = this.state;
+        const { project , projectTeam } = this.state;
+        console.log(project.team);
+        
         return (
             <>
         {/* <!-- start team details area --> */}
@@ -50,23 +59,28 @@ class ProjectDetailsInner extends React.Component {
                                     
                                 </div>
                                 <p className="item justify">
-                                    {user.body}
+                                    {project.descr}
                                 </p>
                             </div>
                              <div className="single-item mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                 <div className="item-title">
                                     <h4>Team</h4>
                                 </div>
-                                <p className="item justify">
-                                    {user.body}
-                                </p>   
+                                {projectTeam.map(item => {
+                                    return (<Link  to={{ 
+                                        pathname: "/team-details/" + item.id,
+                                        state: {userID: item.id}
+                                    }}>
+                                    <li className="item justify" style={{fontSize:'20px', color: 'darkblue'}}>
+                                        <span style={{fontSize:'18px', color: 'black'}}>{item.nome}</span></li></Link>);
+                                })} 
                             </div>
-                            <div className="single-item mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                           {/*  <div className="single-item mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                 <div className="item-title">
                                     <h4>Publications</h4>
                                 </div>
                                 <p className="item justify">
-                                    {user.body}
+                                    {project.body}
                                 </p>  
                             </div>
                             <div className="single-item mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
@@ -74,9 +88,9 @@ class ProjectDetailsInner extends React.Component {
                                     <h4>Theses</h4>
                                 </div>
                                 <p className="item justify">
-                                    {user.body}
+                                    {project.body}
                                 </p>  
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

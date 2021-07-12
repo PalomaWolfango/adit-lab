@@ -10,16 +10,16 @@ class SingleProjectInfo extends React.Component {
         super();
     
         this.state = {
-          user: [],
+            project: [],
         };
     }
 
     componentDidMount = () => {
         
         try {
-          axios.get("https://jsonplaceholder.typicode.com/posts/" + this.props.location.state.projectID).then((response) => {
+          axios.get("http://adit.ipvc.pt/backend/backend/api/project/single.php?id=" + this.props.location.state.projectID).then((response) => {
             this.setState({
-                user: response.data,
+                project: response.data,
             });
           });
         } catch (error) {
@@ -29,17 +29,17 @@ class SingleProjectInfo extends React.Component {
 
     render(){
         const data = sectionData.projectDetails;
-        const { user } = this.state;
-        /* console.log(user); */
+        const { project } = this.state;
+       
         return (
             
             <>
                 <div className="team-inner inner-shadow wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                    {/* <img src={user.imagem} className="img-fluid" alt="Team" /> */}
+                    <img src={project.imagem} className="img-fluid" alt="Team" />
                     <div className="fig-detail text-center">
-                        <h3>{user.title}</h3>
-                        <p>{user.title}</p>  // tipo de projeto
-                        <p>{user.title}</p>  // Estado de projeto
+                        <h3>{project.nome}</h3>
+                        <p>{project.tipo}</p>
+                        <p>{project.research_area}</p>
                         
                     </div>
                 </div>
@@ -50,10 +50,7 @@ class SingleProjectInfo extends React.Component {
                         </div> 
                          <ul>
                         <li>
-                            <p><span>{user.body}</span></p>
-                            <br></br>
-                            <br></br>
-                            <br></br>
+                            <p><span>{project.estado}</span></p>
                         </li>
                         </ul> 
                      </div> 
@@ -63,10 +60,7 @@ class SingleProjectInfo extends React.Component {
                         </div> 
                          <ul>
                         <li>
-                            <p><span>{user.body}</span></p>
-                            <br></br>
-                            <br></br>
-                            <br></br>
+                            <p><span>{project.funded_by}</span></p>
                         </li>
                         </ul> 
                      </div>  
@@ -76,10 +70,11 @@ class SingleProjectInfo extends React.Component {
                         </div> 
                          <ul>
                         <li>
-                            <p><span>{user.body}</span></p>
-                            <br></br>
-                            <br></br>
-                            <br></br>
+                        <label style={{fontSize:'15px', color: '#53565At'}}  for="FundeBy"><b>Start Date:</b></label>
+                        <span style={{marginLeft:"10px"}}>{project.data_inicio}</span>
+                        <br></br>
+                        <label style={{fontSize:'15px', color: '#53565At'}}  for="FundeBy"><b>End Date:</b></label>
+                        <span style={{marginLeft:"10px"}}>{project.data_fim}</span>
                         </li>
                         </ul> 
                      </div>   
@@ -89,9 +84,7 @@ class SingleProjectInfo extends React.Component {
                         </div> 
                          <ul>
                         <li>
-                            <p><span>{user.body}</span></p>
-                            <br></br>
-                            <br></br>
+                            <p><span>{project.budget}</span></p>
                             <br></br>
                         </li>
                         </ul> 
