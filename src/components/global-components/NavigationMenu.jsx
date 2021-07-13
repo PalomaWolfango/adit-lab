@@ -61,7 +61,7 @@ const NavigationMenu = () => {
                                         </ul> */}
                                     </li>
                                     <li><Link to="/publications">publications</Link></li>
-                                    <li><Link to="/news">news</Link></li>
+                                    <li><Link to="#">news</Link></li>
                                     <li><Link to="/research-areas">research areas</Link></li>
                                     <li><Link to="/contact">contacts</Link></li>
                                 </ul>
