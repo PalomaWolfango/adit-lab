@@ -89,24 +89,36 @@ const ProjectV2 = () => {
             {/* <!-- start project area --> */}
             <section className={`project p-120 ${window.location.pathname === "/project" ? "project-page" : 3}`}>
 
-                <div className="container">
-                    <div className="row">
+                <div className='container' style={{float: 'left', width:'100px', marginLeft: '50px', marginTop:'150px'}}>
                     <div className="team-inner right-part" style={{textAlign: 'justify', textJustify: 'inter-word'}}>
-                    <div className="item-title"> 
-                        <h5>Filter:</h5>
-                        <ColoredLine color= '#2a3bd8' />
-                        <h2 onClick={setFilter} className="item justify" style={{fontSize:'20px', color: 'darkblue'}}>
-                        <span style={{fontSize:'18px', color: 'black', 'fontWeight': activeFilter === 'National' ? 'bold' : 'normal'}}>National</span></h2>             
-                        <h2 onClick={setFilter} className="item justify" style={{fontSize:'20px', color: 'darkblue'}}>
-                        <span style={{fontSize:'18px', color: 'black', 'fontWeight': activeFilter === 'International' ? 'bold' : 'normal'}}>International</span></h2>                   
-                        </div>
-                         </div>
+                            <div className="item-title"> 
+                                <h5>Filter:</h5>
+                                <ColoredLine color= '#2a3bd8' />
+                                <h2 onClick={setFilter} className="item justify" style={{fontSize:'20px', color: 'darkblue'}}>
+                                <span style={{fontSize:'18px', color: 'black', 'fontWeight': activeFilter === 'National' ? 'bold' : 'normal'}}>National</span></h2>             
+                                <h2 onClick={setFilter} className="item justify" style={{fontSize:'20px', color: 'darkblue'}}>
+                                <span style={{fontSize:'18px', color: 'black', 'fontWeight': activeFilter === 'International' ? 'bold' : 'normal'}}>International</span></h2>                   
+                            </div>
+                    </div>
+                </div>
+
+                <div className="container" style={{marginLeft: '18%'}}>
+                    <div className="row">
+                        {/* <div className="team-inner right-part" style={{textAlign: 'justify', textJustify: 'inter-word'}}>
+                            <div className="item-title"> 
+                                <h5>Filter:</h5>
+                                <ColoredLine color= '#2a3bd8' />
+                                <h2 onClick={setFilter} className="item justify" style={{fontSize:'20px', color: 'darkblue'}}>
+                                <span style={{fontSize:'18px', color: 'black', 'fontWeight': activeFilter === 'National' ? 'bold' : 'normal'}}>National</span></h2>             
+                                <h2 onClick={setFilter} className="item justify" style={{fontSize:'20px', color: 'darkblue'}}>
+                                <span style={{fontSize:'18px', color: 'black', 'fontWeight': activeFilter === 'International' ? 'bold' : 'normal'}}>International</span></h2>                   
+                            </div>
+                        </div> */}
 
                         <div className="col-lg-8 offset-lg-1">
                             <SectionTitle subtitle ={data.sectionHeading.subtitle} title={data.sectionHeading.title} titleContent={data.sectionHeading.content}/>
                         </div>
                         
-
                         <Frame frames={currentFrames} loading={loading} />
                         <div className="col-lg-8 offset-lg-2">
                             <Pagination framesPerPage={framesPerPage} totalFrames={frames.length} paginate={paginate}/> 
