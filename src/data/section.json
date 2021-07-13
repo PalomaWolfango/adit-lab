@@ -791,8 +791,8 @@
         "news": {
             "sectionHeading": {
                 "subtitle":"Our Latest Blog",
-                "title": "Latest News and Articles",
-                "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinciunt consectetuer adipiscing elit, sed diam nonummy"
+                "title": "Latest News",
+                "content": "All the News are here."
             },
             "singleNews": [
                 {

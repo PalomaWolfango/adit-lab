@@ -13,15 +13,7 @@ const News = () => {
     return (
        <Layouts  pageTitle="News">
            <HeaderV3  background={data.news.background} title={data.news.title} pageName={data.news.pageName}  />
-           <New />
-           <br></br>
-           <br></br>
-           <br></br>
-           <br></br>
-           <br></br>
-           <br></br>
-           <br></br>
-           <br></br>
+           <New/>
            <br></br>
            <br></br>
            <br></br>
