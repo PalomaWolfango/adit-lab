@@ -29,6 +29,8 @@ const Publications = () => {
         
         fetchPublication();
     }, []); 
+
+     
     
     //Get current frames
     const indexOfLastPublication = currentPage * publicationPerPage;
@@ -37,7 +39,7 @@ const Publications = () => {
   
   
     //Change Page
-    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+    const paginate = (pageNumber) => setCurrentPage(pageNumber); 
 
     return (
         <>
@@ -51,8 +53,8 @@ const Publications = () => {
                         </div>
                         {/* <div className="blog-sidebar"><SideBar /></div> */}
                         <Publication publication={currentPublication} loading={loading} />
-                        <div className="col-lg-8 offset-lg-2">
-                            <Pagination publicationPerPage={publicationPerPage} totalPublication={publication.length} paginate={paginate}/> 
+                         <div className="col-lg-8 offset-lg-2">
+                            <Pagination count={100} publicationPerPage={publicationPerPage} totalPublication={publication.length} paginate={paginate}/> 
                         </div>   
                     </div>
                 </div>
