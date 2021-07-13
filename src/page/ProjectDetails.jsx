@@ -15,7 +15,7 @@ const ProjectDetails = () => {
         <>
             <Layouts  pageTitle='Project Details'>
                 <HeaderV3 background={data.projectDetails.background} title={data.projectDetails.title} pageName={data.projectDetails.pageName} />
-                 <ProjectDetailsInner />
+                <ProjectDetailsInner />
                 <br></br>
                 <br></br>
                 <br></br>

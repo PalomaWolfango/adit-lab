@@ -42,7 +42,7 @@ export const Frames = ({frames, loading}) => {
                                         <span style={{marginLeft:"10px"}}>{post.funded_by}</span>
                                         <br></br>
                                         <label style={{fontSize:'15px', color: '#53565At'}} for="Duration"><b>Budget:</b></label>
-                                        <span style={{marginLeft:"10px"}}><NumberFormat value={post.budget} displayType={'text'} format={'###,###.## €'} suffix={' €'} /></span>
+                                        <span style={{marginLeft:"10px"}}><NumberFormat value={post.budget} displayType={'text'} format={'#,###,###.###€'}/></span>
                                         <br></br>
                                         <br></br>
                                         </div>

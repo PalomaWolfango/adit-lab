@@ -11,19 +11,17 @@ class ProjectDetailsInner extends React.Component {
     
         this.state = {
           project: [],
-          projectTeam: [],
+          projectTeam: []
         };
     }
 
     componentDidMount = () => {
         
         try {
-          axios.get("http://adit.ipvc.pt/backend/backend/api/project/single.php?id=" + this.props.location.state.projectID).then((response) => {
+          axios.get("http://adit.ipvc.pt/backend/backend/api/project/single.php?id="  + this.props.location.state.projectID).then((response) => {
             this.setState({
                 project: response.data,
                 projectTeam: response.data.team,
-               
-                  
             });
             
             
@@ -33,13 +31,9 @@ class ProjectDetailsInner extends React.Component {
         }
     };
 
-    
-    
-
     render(){
         const data = sectionData.projectDetails;
-        const { project , projectTeam } = this.state;
-        console.log(project.team);
+        const { project , projectTeam } = this.state; 
         
         return (
             <>
@@ -72,8 +66,9 @@ class ProjectDetailsInner extends React.Component {
                                         state: {userID: item.id}
                                     }}>
                                     <li className="item justify" style={{fontSize:'20px', color: 'darkblue'}}>
-                                        <span style={{fontSize:'18px', color: 'black'}}>{item.nome}</span></li></Link>);
-                                })} 
+                                        <span style={{fontSize:'18px', color: 'black'}}>{item.nome}</span></li></Link>
+                                    );
+                                })}   
                             </div>
                            {/*  <div className="single-item mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                 <div className="item-title">

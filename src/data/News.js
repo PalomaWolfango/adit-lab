@@ -23,19 +23,18 @@ export const News = ({news, loading}) => {
                         <div className={`col-lg-12 col-md-6 wow `} data-wow-duration="1.5s" data-wow-delay=".4s">
                             <div className="item">
                                 <div className="container">
-                                    
                                     <div className="text mt-3 justify-content-center">
                                         <span style={{fontSize: '20px',color: 'darkblue'}}>
-                                            <b>{post.artigo}</b>
-                                        </span>
-                                        <br></br>
-                                        <br></br>
-                                        <span style={{fontSize: '15px', color: 'black'}}>
-                                            {post.tipo}
+                                            <b>{post.titulo}</b>
                                         </span>
                                         <br></br>
                                         <span style={{fontSize: '13px', color: 'GrayText'}}>
-                                            {post.ano}
+                                            {post.data}
+                                        </span>
+                                        <br></br>
+                                        <br></br>
+                                        <span style={{fontSize: '15px', color: 'black', textAlign:'justify'}}>
+                                            {post.descr}
                                         </span>
                                         <br></br>
                                         <br></br>

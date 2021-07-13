@@ -18,9 +18,9 @@ const News2 = () => {
     useEffect(() => {
         const fetchNew = async () => {
           setLoading(true);
-          const res = await axios.get("http://adit.ipvc.pt/backend/backend/api/article/simple/list.php");
+          const res = await axios.get("http://adit.ipvc.pt/backend/backend/api/news/list.php");
 
-          setNews(res.data.data);
+          setNews(res.data);
           setLoading(false)
 
         }

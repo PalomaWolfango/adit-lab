@@ -26,8 +26,8 @@ const ProjectV2 = () => {
           setLoading(true);
           const res = await axios.get("http://adit.ipvc.pt/backend/backend/api/project/list.php");
 
-          setFrames(res.data);
-          setFilteredFrames(res.data);
+          setFrames(res.data.data);
+          setFilteredFrames(res.data.data);
           setLoading(false)
 
         }
@@ -94,9 +94,9 @@ const ProjectV2 = () => {
                             <div className="item-title"> 
                                 <h5>Filter:</h5>
                                 <ColoredLine color= '#2a3bd8' />
-                                <h2 onClick={setFilter} className="item justify" style={{fontSize:'20px', color: 'darkblue'}}>
+                                <h2 onClick={setFilter} className="item justify" style={{fontSize:'20px', color: 'darkblue', cursor: 'pointer'}}>
                                 <span style={{fontSize:'18px', color: 'black', 'fontWeight': activeFilter === 'National' ? 'bold' : 'normal'}}>National</span></h2>             
-                                <h2 onClick={setFilter} className="item justify" style={{fontSize:'20px', color: 'darkblue'}}>
+                                <h2 onClick={setFilter} className="item justify" style={{fontSize:'20px', color: 'darkblue', cursor: 'pointer'}}>
                                 <span style={{fontSize:'18px', color: 'black', 'fontWeight': activeFilter === 'International' ? 'bold' : 'normal'}}>International</span></h2>                   
                             </div>
                     </div>
