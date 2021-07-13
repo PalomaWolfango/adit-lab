@@ -44,7 +44,7 @@ export const Frames = ({frames, loading}) => {
                                         <label style={{fontSize:'15px', color: '#53565At'}} for="Duration"><b>Budget:</b></label>
                                         <span style={{marginLeft:"10px"}}><NumberFormat value={post.budget} displayType={'text'} format={'###,###.## €'} suffix={' €'} /></span>
                                         <br></br>
-                                     
+                                        <br></br>
                                         </div>
                                 </div>
                             </div>
