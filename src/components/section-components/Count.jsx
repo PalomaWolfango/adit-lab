@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import {sectionData} from './../../data/section.json'
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import SectionTitle from '../global-components/SectionTitle';
 import 'react-circular-progressbar/dist/styles.css';
 
 const Count = () => {
@@ -8,12 +9,15 @@ const Count = () => {
 
     const percentage = 66;
 
-    return (
+    return ( 
         <div>
             {/* <!-- start count area --> */}
             <section className="count pt-90 bg-blue">
                 <div className="container">
                     <div className="row">
+                        <div className="col-lg-8 offset-lg-2">
+                            <SectionTitle title={data.title} />
+                        </div>
                         {data.singleCount.map((item)=>{
                                 return (
                                     

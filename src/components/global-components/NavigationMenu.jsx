@@ -9,6 +9,7 @@ const NavigationMenu = () => {
     const [mobileMenuToggle, setMobileMenuToggle] = useState(false);
     let data = sectionData.header;
 
+
     return (
         <>
         {/* <!-- Start menubar area --> */}
@@ -23,7 +24,7 @@ const NavigationMenu = () => {
                             <div className={`header-menu ml-auto position-static ${menuToggle === true ? 'menuToggle' : ''}`}>
                             <div id="menu-button"  onClick={()=>{setMobileMenuToggle(!mobileMenuToggle)}}><i className="fas fa-bars"></i></div>
                                 <ul className={`menu ${mobileMenuToggle === true ? 'open' : ''}`}>
-                                    <li className="active">
+                                    <li>
                                         <Link to="/">home</Link>
                                         {/* <ul>
                                             <li><Link to="/">home 1</Link></li>

@@ -148,6 +148,7 @@
             ]
         },
         "count":{
+            "title": "Indicators of the last 5 years",
             "singleCount":[
                 {
                     "title":"Collaborators from the center",
@@ -212,7 +213,7 @@
             "title": "Mission & Vision",
             "subtitleMission": "Mission",
             "subtitleVision": "Vision",
-            "contentMission": "ADiT-Lab’s mission is to contribute to the advancement of regional, national and international knowledge with a focus on digital transformation for sustainability. Based on a multidisciplinary group of researchers, ADiT-Lab will contribute to 4 fundamental objectives: improving the quality of life of citizens, the digital preservation of cultural heritage, the improvement of organizational processes and the reduction of the ecological footprint. To this end, the group will count on the competences and skills of researchers in the area of information and communication technologies and electronics, as well as complementary knowledge from researchers in areas such as tourism, health, education, design, among others.",
+            "contentMission": "ADiT-LAB's mission is to contribute to the advancement of regional, national and international knowledge with a focus on digital transformation for sustainability. Based on a multidisciplinary group of researchers, ADiT-LAB acts in three main thematic lines: intelligent environments, interactive media and organizational processes, with a transversal axis of cybersecurity. To this end, the group will rely on the multidisciplinary skills of its researchers in the areas of information and communication technologies and electronics, as well as the complementary knowledge of researchers in areas such as sports, health, mathematics or energy.",
             "contentVision": "ADiT-Lab intends to become, until 2025, a research center recognized by the Portuguese Foundation for Science and Technology (FCT) as well as asserting itself as a national reference in the area of digital transformation for sustainability, with substantial scientific production andprojects in the area. It also intends to start building its presence on theinternational scientific network now, so that in 2030 it will have that sameconsolidated presence, with several foreign partners with whom it has jointscientific publications as well as international projects.",
             "metaList": [{
                     "itemContent": "Nunc iaculis libero in ipsum molestie fermentum, a molestie nulla aliquet."
