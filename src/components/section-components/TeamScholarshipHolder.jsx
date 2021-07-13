@@ -22,7 +22,7 @@ const TeamScholarshipHolder = () => {
         const res = await axios.get("http://adit.ipvc.pt/backend/backend/api/user/list.php");
         
         //Aparecer apenas os collaborators
-        const scholarshipHolder = _.filter(res.data, {cargo: 'Scholarship Holder'});
+        const scholarshipHolder = _.filter(res.data.data, {cargo: 'Scholarship Holder'});
 
         setPosts(scholarshipHolder);
         setLoading(false)

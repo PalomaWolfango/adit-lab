@@ -22,7 +22,7 @@ const Team = () => {
         const res = await axios.get("http://adit.ipvc.pt/backend/backend/api/user/list.php");
         
         //Aparecer apenas os collaborators
-        const collaborators = _.filter(res.data, {cargo: 'Collaborator'});
+        const collaborators = _.filter(res.data.data, {cargo: 'Collaborator'});
 
         setPosts(collaborators);
         setLoading(false)

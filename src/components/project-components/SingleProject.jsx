@@ -85,7 +85,7 @@ class SingleProjectInfo extends React.Component {
                         </div> 
                          <ul>
                         <li>
-                            <p><span><NumberFormat value={project.budget} displayType={'text'} format={'###,###.##€'}/></span></p>
+                            <p><NumberFormat value={project.budget} displayType={'text'} format={'#,###,###.###€'}/></p>
                             <br></br>
                         </li>
                         </ul> 

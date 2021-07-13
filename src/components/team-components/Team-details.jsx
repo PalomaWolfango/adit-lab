@@ -3,7 +3,7 @@ import axios from "axios";
 import SingleMemberInfo from './SingleMember';
 import Posts from '././../../data/Posts.js';
 import { sectionData } from './../../data/section.json';
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 class TeamDetailsInner extends React.Component {
     constructor() {
@@ -11,6 +11,8 @@ class TeamDetailsInner extends React.Component {
     
         this.state = {
           user: [],
+          userArticles: [],
+          userProjects: []
         };
     }
 
@@ -19,6 +21,8 @@ class TeamDetailsInner extends React.Component {
           axios("http://adit.ipvc.pt/backend/backend/api/user/single.php?id=" + this.props.location.state.userID).then((response) => {
             this.setState({
                 user: response.data,
+                userArticles: response.data.articles,
+                userProjects: response.data.projects,
             });
           });
         } catch (error) {
@@ -29,7 +33,7 @@ class TeamDetailsInner extends React.Component {
 
     render(){
         const data = sectionData.teamDetails;
-        const { user } = this.state;
+        const { user, userArticles, userProjects } = this.state;
         return (
             <>
         {/* <!-- start team details area --> */}
@@ -55,14 +59,31 @@ class TeamDetailsInner extends React.Component {
                                 <div className="item-title">
                                     <h4>Projects</h4>
                                 </div>
+                                    {userProjects.map(item => {
+                                        return(<Link  to={{ 
+                                            pathname: "/project-details/" + item.id,
+                                            state: {projectID: item.id}
+                                        }}>
+                                        
+                                        <li className="item justify" style={{fontSize:'20px', color: 'darkblue'}}>
+                                            <span style={{fontSize:'18px', color: 'black'}}>{item.nome}</span></li></Link>
+                                        );
+                                    })}
+                                
                                 
                             </div>
-                            <div className="single-item mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                            {/* <div className="single-item mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                 <div className="item-title">
                                     <h4>Publications</h4>
                                 </div>
+                                    {userArticles.map(item => {
+                                        return(<li className="item justify" style={{fontSize:'20px', color: 'darkblue'}}>
+                                        <span style={{fontSize:'18px', color: 'black'}}>{item.artigo}</span></li>);
+                                        
+                                    })}
                                 
-                            </div>
+                                
+                            </div> */}
                         </div>
                     </div>
                 </div>
