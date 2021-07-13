@@ -35,11 +35,7 @@ function AppRoute() {
                 < Route path = '/team-executive-board' exact component = { TeamPageExecutiveBoard } />
                 < Route path = '/team-scholarship-holder' exact component = { TeamPageScholarshipHolder } />
                 < Route path = '/team-collaborator' exact component = { TeamPageCollaborator } />
-                <Route
-  exact
-  path="/team-details/:user_id"
-  component={TeamDetails}
-/>
+                <Route exact path="/team-details/:user_id" component={TeamDetails} />
                 < Route path = '/pricing' exact component = { PricingPage } />
                 < Route path = '/contact' exact component = { ContactPage } />
                 < Route path = '/blog-details' exact component = { BlogDetails } />

@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from 'react-router-dom';
 import { sectionData } from '../../data/section.json';
 import { withRouter } from "react-router-dom";
+import NumberFormat from 'react-number-format';
 
 class SingleProjectInfo extends React.Component {
 
@@ -84,7 +85,7 @@ class SingleProjectInfo extends React.Component {
                         </div> 
                          <ul>
                         <li>
-                            <p><span>{project.budget}</span></p>
+                            <p><span><NumberFormat value={project.budget} displayType={'text'} format={'###,###.##€'}/></span></p>
                             <br></br>
                         </li>
                         </ul> 

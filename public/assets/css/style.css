@@ -1379,7 +1379,7 @@ section.team.team-page .col-lg-4.col-md-6{
   margin-bottom: 65px;
   margin-left: 25%;
   width: 80%;
-  height: 225px;
+  height: fit-content;
   margin-top: -250px;
 }
 .project .item .image {

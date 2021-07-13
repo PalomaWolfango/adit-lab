@@ -12,7 +12,7 @@ const Service = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-8 offset-lg-2">
-                            <SectionTitle title={data.serviceSectionHeading.title} titleContent={data.serviceSectionHeading.content}/>
+                            <SectionTitle title={data.serviceSectionHeading.title} />
                             </div>
                             <div className="col-lg-12">
                                 <div className="row">

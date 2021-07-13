@@ -26,8 +26,8 @@ export const Posts = ({posts, loading}) => {
                                 <div className="container col-lg-10">
                                     <div className="text mt-3 justify-content-center" style={{margin: '10px'}}>
                                         <Link to={{ 
-                                            pathname: "/team-details/" + post.id,
-                                            state: {userID: post.id, userCargo: post.cargo}
+                                            pathname: `/team-details/${post.id}`,
+                                            state: {userID: post.id}
                                         }}>
                                             <span style={{fontSize:'20px', color: 'darkblue'}}><b>{post.nome}</b></span>
                                         </Link>

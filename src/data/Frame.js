@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import NumberFormat from 'react-number-format';
 
 
 export const Frames = ({frames, loading}) => {
@@ -41,9 +42,9 @@ export const Frames = ({frames, loading}) => {
                                         <span style={{marginLeft:"10px"}}>{post.funded_by}</span>
                                         <br></br>
                                         <label style={{fontSize:'15px', color: '#53565At'}} for="Duration"><b>Budget:</b></label>
-                                        <span style={{marginLeft:"10px"}}>{post.budget} €</span>
+                                        <span style={{marginLeft:"10px"}}><NumberFormat value={post.budget} displayType={'text'} format={'###,###.## €'} suffix={' €'} /></span>
                                         <br></br>
-                                     
+                                        <br></br>
                                         </div>
                                 </div>
                             </div>
