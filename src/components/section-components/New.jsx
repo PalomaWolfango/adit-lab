@@ -1,69 +1,62 @@
-import React from 'react';
 import SectionTitle from '../global-components/SectionTitle';
 import {sectionData} from './../../data/section.json'
-import {Link} from 'react-router-dom'
-import { Component } from 'react';
-import { withRouter } from "react-router-dom";
+import React, { useState, useEffect} from "react";
 import axios from "axios";
+import Pagination from "../../data/PaginationNews.js";
+import News from "../../data/News.js";
+import _ from "lodash";
 
-class News2 extends Component {
+const News2 = () => {
 
-    constructor() {
-        super();
+    let data = sectionData.news; 
 
-        this.state = {
-            dados: [],
-            dadosTeam: [],
-            count: [],
+    const [news, setNews] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [newsPerPage] = useState(15);
+
+    useEffect(() => {
+        const fetchNew = async () => {
+          setLoading(true);
+          const res = await axios.get("http://adit.ipvc.pt/backend/backend/api/article/simple/list.php");
+
+          setNews(res.data.data);
+          setLoading(false)
+
         }
-    }
-    componentDidMount() {
-        try {
-            
-            axios.get("http://adit.ipvc.pt/backend/backend/api/project/single.php?id=1").then((response) => {
-                console.log(response);
-                this.setState({
-                    dados: response.data,
-                    dadosTeam: response.data.team,
-                  });
-                });
-        } catch (error) {
-            console.error(error);
-        }
-
-        try {
-            
-            axios.get("http://adit.ipvc.pt/backend/backend/api/article/simple/list.php").then((response) => {
-                this.setState({
-                    count: response.data.count,
-                  });
-                });
-        } catch (error) {
-            console.error(error);
-        }
-
-            
-    }
-
-    render() {
-
-/* const News2 = () => { */
-    /* let data = sectionData.news;   
-    let publicUrl = process.env.PUBLIC_URL+'/' */
-
-    const { dados, dadosTeam, count} = this.state;
-    console.log(dadosTeam[0]);
+        
+        fetchNew();
+    }, []); 
     
-   return(
-        <>
+    //Get current frames
+    const indexOfLastNew = currentPage * newsPerPage;
+    const indexOfFirstNew = indexOfLastNew - newsPerPage;
+    const currentNew = news.slice(indexOfFirstNew, indexOfLastNew);
+  
+  
+    //Change Page
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-        {dadosTeam.map(item => {
-            return (<h1>{item.email}</h1>);
-        })}
+    return (
+        <>
+         <div>
+            <section className={`news p-120 ${window.location.pathname === "/news" ? "news-page" : 3}`}>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-8 offset-lg-2">
+                            <SectionTitle title={data.sectionHeading.title} titleContent={data.sectionHeading.content}/>
+                        </div>
+                        <News news={currentNew} loading={loading} />
+                        <div className="col-lg-8 offset-lg-2">
+                            <Pagination newsPerPage={newsPerPage} totalNews={news.length} paginate={paginate}/> 
+                        </div>   
+                    </div>
+                </div>
+            </section> 
+        </div>
            
         </>
-    )
-
-}}
-
-export default withRouter(News2);
+    );
+}
+ 
+export default News2;
