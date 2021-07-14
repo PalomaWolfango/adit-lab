@@ -61,22 +61,19 @@ class TeamDetailsInner extends React.Component {
                                 <div className="item-title">
                                     <h4>Projects</h4>
                                 </div>
-                                    {userProjects == null ? (
-                                        <span>None.</span>
-                                    ) : (
-                                        userProjects.map(item => {
-                                            return(<Link  to={{ 
-                                                pathname: "/project-details/" + item.id,
-                                                state: {projectID: item.id}
-                                                }}>
-                                        
-                                                <li className="item justify" style={{fontSize:'20px', color: 'darkblue'}}>
-                                                    <span style={{fontSize:'18px', color: 'black'}}>{item.nome}</span></li></Link>
-                                            );
-                                        })
-                                    )}
-                                
-                                
+                                {userProjects == null ? (
+                                    <span>None.</span>
+                                ) : (
+                                    userProjects.map(item => {
+                                        return(<Link  to={{ 
+                                            pathname: "/project-details/" + item.id,
+                                            state: {projectID: item.id}
+                                            }}>                        
+                                            <li className="item justify" style={{fontSize:'20px', color: 'darkblue'}}>
+                                                <span style={{fontSize:'18px', color: 'black'}}>{item.nome}</span></li></Link>
+                                        );
+                                    })
+                                )}    
                             </div>
                             {/* <div className="single-item mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                 <div className="item-title">
