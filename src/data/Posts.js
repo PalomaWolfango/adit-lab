@@ -16,7 +16,6 @@ export const Posts = ({posts, loading}) => {
             <div className="row justify-content-center">
                        
                 {posts.map(post =>{
-
                     return (
                         <div className={`col-lg-12 col-md-6 wow `} data-wow-duration="1.5s" data-wow-delay=".4s">
                             <div className="item">
