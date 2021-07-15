@@ -44,7 +44,7 @@ const News2 = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 offset-lg-2">
-                            <SectionTitle title={data.sectionHeading.title} titleContent={data.sectionHeading.content}/>
+                            <SectionTitle title={data.sectionHeading.title} />
                         </div>
                         <News news={currentNew} loading={loading} />
                         <div className="col-lg-8 offset-lg-2">

@@ -62,7 +62,7 @@ class TeamDetailsInner extends React.Component {
                                     <h4>Projects</h4>
                                 </div>
                                 {userProjects == null ? (
-                                    <span>None.</span>
+                                    <span>No projects at the moment.</span>
                                 ) : (
                                     userProjects.map(item => {
                                         return(<Link  to={{ 
