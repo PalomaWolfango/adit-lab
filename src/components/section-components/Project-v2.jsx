@@ -116,7 +116,7 @@ const ProjectV2 = () => {
                         </div> */}
 
                         <div className="col-lg-8 offset-lg-1">
-                            <SectionTitle subtitle ={data.sectionHeading.subtitle} title={data.sectionHeading.title} titleContent={data.sectionHeading.content}/>
+                            <SectionTitle subtitle ={data.sectionHeading.subtitle} title={data.sectionHeading.title} />
                         </div>
                         
                         <Frame frames={currentFrames} loading={loading} />

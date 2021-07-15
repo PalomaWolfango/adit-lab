@@ -16,7 +16,6 @@ export const Posts = ({posts, loading}) => {
             <div className="row justify-content-center">
                        
                 {posts.map(post =>{
-
                     return (
                         <div className={`col-lg-12 col-md-6 wow `} data-wow-duration="1.5s" data-wow-delay=".4s">
                             <div className="item">
@@ -26,7 +25,7 @@ export const Posts = ({posts, loading}) => {
                                 <div className="container col-lg-10">
                                     <div className="text mt-3 justify-content-center" style={{margin: '10px'}}>
                                         <Link to={{ 
-                                            pathname: `/team-details/${post.id}`,
+                                            pathname: '/team-details/' + post.id,
                                             state: {userID: post.id}
                                         }}>
                                             <span style={{fontSize:'20px', color: 'darkblue'}}><b>{post.nome}</b></span>

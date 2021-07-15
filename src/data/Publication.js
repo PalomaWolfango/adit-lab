@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from "react";
 import {Link} from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
+import PublicationAuthor from '../components/publications-components/Publications-authors';
 import Dropdown from 'react-bootstrap/Dropdown'
 import FormControl from 'react-bootstrap/FormControl'
 
@@ -28,7 +29,7 @@ export const Publication = ({publication, loading}) => {
             <FaSearch style={{color: '#192fab', fontSize:'30px', marginRight: '15px'}}/> <input style={{marginBottom: '50px', width:"90%"}} className="form-control" type="text" placeholder="Search by publication year or type..." onChange={(event) =>{
             setSearchTerm(event.target.value)
         } } />
-        
+        {/* <PublicationAuthor/> */}
         {publication.filter((val)=>{
             if (searchTerm == "") {
                 return val
@@ -56,7 +57,15 @@ export const Publication = ({publication, loading}) => {
                                     <span style={{fontSize:'20px', color: 'darkblue'}}><b>{post.title}</b></span>
                                 </Link> */}
                                 <br></br>
+                                
+                                
+
+                                <span style={{fontSize: '15px', color: 'GrayText'}}>
+                                    JCR: {val.jcr} | SJR: {val.sjr}
+                                </span>
                                 <br></br>
+                                        
+                                    
                                 <span style={{fontSize: '15px', color: 'black'}}>
                                     {val.tipo}
                                 </span>

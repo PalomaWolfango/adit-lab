@@ -21,7 +21,7 @@ class ProjectDetailsInner extends React.Component {
           axios.get("http://adit.ipvc.pt/backend/backend/api/project/single.php?id="  + this.props.location.state.projectID).then((response) => {
             this.setState({
                 project: response.data,
-                projectTeam: response.data.team,
+                projectTeam: response.data.team
             });
             
             

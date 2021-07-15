@@ -41,6 +41,7 @@ class SingleProjectInfo extends React.Component {
                         <h3>{project.nome}</h3>
                         <p>{project.tipo}</p>
                         <p>{project.research_area}</p>
+                        <p><b>Responsible: </b>{project.email_responsavel}</p>
                         
                     </div>
                 </div>

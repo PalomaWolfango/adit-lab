@@ -34,6 +34,8 @@ class TeamDetailsInner extends React.Component {
     render(){
         const data = sectionData.teamDetails;
         const { user, userArticles, userProjects } = this.state;
+        //console.log(userProjects.length);
+
         return (
             <>
         {/* <!-- start team details area --> */}
@@ -59,18 +61,19 @@ class TeamDetailsInner extends React.Component {
                                 <div className="item-title">
                                     <h4>Projects</h4>
                                 </div>
-                                    {userProjects.map(item => {
+                                {userProjects == null ? (
+                                    <span>No projects at the moment.</span>
+                                ) : (
+                                    userProjects.map(item => {
                                         return(<Link  to={{ 
                                             pathname: "/project-details/" + item.id,
                                             state: {projectID: item.id}
-                                        }}>
-                                        
-                                        <li className="item justify" style={{fontSize:'20px', color: 'darkblue'}}>
-                                            <span style={{fontSize:'18px', color: 'black'}}>{item.nome}</span></li></Link>
+                                            }}>                        
+                                            <li className="item justify" style={{fontSize:'20px', color: 'darkblue'}}>
+                                                <span style={{fontSize:'18px', color: 'black'}}>{item.nome}</span></li></Link>
                                         );
-                                    })}
-                                
-                                
+                                    })
+                                )}    
                             </div>
                             {/* <div className="single-item mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                 <div className="item-title">
