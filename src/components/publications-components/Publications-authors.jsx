@@ -30,7 +30,7 @@ class PublicationsAuthors extends React.Component {
         return (
             <>
             <div>
-            {/* {publicationArticles == null ? (
+            {publicationArticles == null ? (
                 <span>No authors at the moment.</span>
             ) : (
                 publicationArticles.map(item => {
@@ -44,7 +44,7 @@ class PublicationsAuthors extends React.Component {
                         </div>
                     );
                 })
-            )} */}
+            )}
             </div>                        
         </>);
     } 

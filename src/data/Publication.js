@@ -41,50 +41,136 @@ export const Publication = ({publication, loading}) => {
                 return val
             }
         }).map((val, key) => {
-            return (
-                <div className={`col-lg-12 col-md-6 wow `} data-wow-duration="1.5s" data-wow-delay=".4s">
-                    <div className="item">
-                        <div className="container">
-                        
-                            <div className="text mt-3 justify-content-center">
-                                <span style={{fontSize: '20px',color: 'darkblue'}}>
-                                    <b>{val.artigo}</b>
-                                </span>
-                                {/*  <Link to={{ 
-                                    pathname: "/project-details/" + post.id,
-                                    state: {projectID: post.id}
-                                }}>
-                                    <span style={{fontSize:'20px', color: 'darkblue'}}><b>{post.title}</b></span>
-                                </Link> */}
-                                <br></br>
-                                
-                                
-
-                                <span style={{fontSize: '15px', color: 'GrayText'}}>
-                                    JCR: {val.jcr} | SJR: {val.sjr}
-                                </span>
-                                <br></br>
-                                        
-                                    
-                                <span style={{fontSize: '15px', color: 'black'}}>
-                                    {val.tipo}
-                                </span>
-                                <br></br>
-                                <span style={{fontSize: '13px', color: 'GrayText'}}>
-                                    {val.ano}
-                                </span>
-                                <br></br>
-                                <br></br>
-                                {/*  <br></br>
-                                <label style={{fontSize:'15px', color: '#53565At'}}  for="FundeBy"><b>Funded By:</b></label>
-                                <br></br>
-                                <label style={{fontSize:'15px', color: '#53565At'}} for="Duration"><b>Duration:</b></label>
-                                <br></br> */} </div>
+            if (val.jcr == null && val.sjr == null) {
+                return (
+                    <div className={`col-lg-12 col-md-6 wow `} data-wow-duration="1.5s" data-wow-delay=".4s">
+                        <div className="item">
+                            <div className="container">
+                                <div className="text mt-3 justify-content-center">
+                                    <span style={{fontSize: '20px',color: 'darkblue'}}>
+                                        <b>{val.artigo}</b>
+                                    </span>
+                                    <br></br>
+                                    <br></br>
+                                    <span style={{fontSize: '15px', color: 'black'}}>
+                                        {val.tipo}
+                                    </span>
+                                    <br></br>
+                                    <span style={{fontSize: '13px', color: 'GrayText'}}>
+                                        {val.ano}
+                                    </span>
+                                    <br></br>
+                                    <br></br>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-            );
+                )
+            }
+            else {
+                if (val.jcr == null && val.sjr != null) {
+                    return (
+                        <div className={`col-lg-12 col-md-6 wow `} data-wow-duration="1.5s" data-wow-delay=".4s">
+                            <div className="item">
+                                <div className="container">
+                                
+                                    <div className="text mt-3 justify-content-center">
+                                        <span style={{fontSize: '20px',color: 'darkblue'}}>
+                                            <b>{val.artigo}</b>
+                                        </span>
+                                        <br></br>
+                                        
+                                        <span style={{fontSize: '15px', color: 'GrayText'}}>
+                                        SJR: {val.sjr}
+                                        </span>
+    
+                                        <br></br>
+    
+                                        <span style={{fontSize: '15px', color: 'black'}}>
+                                            {val.tipo}
+                                        </span>
+                                        <br></br>
+                                        <span style={{fontSize: '13px', color: 'GrayText'}}>
+                                            {val.ano}
+                                        </span>
+                                        <br></br>
+                                        <br></br> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    );
+                } else {
+                    if (val.sjr == null && val.jcr != null){
+                        return (
+                            <div className={`col-lg-12 col-md-6 wow `} data-wow-duration="1.5s" data-wow-delay=".4s">
+                                <div className="item">
+                                    <div className="container">
+                                    
+                                        <div className="text mt-3 justify-content-center">
+                                            <span style={{fontSize: '20px',color: 'darkblue'}}>
+                                                <b>{val.artigo}</b>
+                                            </span>
+                                            <br></br>
+                                            
+                                            <span style={{fontSize: '15px', color: 'GrayText'}}>
+                                            JCR: {val.jcr}
+                                            </span>
+        
+                                            <br></br>
+        
+                                            <span style={{fontSize: '15px', color: 'black'}}>
+                                                {val.tipo}
+                                            </span>
+                                            <br></br>
+                                            <span style={{fontSize: '13px', color: 'GrayText'}}>
+                                                {val.ano}
+                                            </span>
+                                            <br></br>
+                                            <br></br> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        );
+                    }
+                }
+                return (
+                    <div className={`col-lg-12 col-md-6 wow `} data-wow-duration="1.5s" data-wow-delay=".4s">
+                        <div className="item">
+                            <div className="container">
+                            
+                                <div className="text mt-3 justify-content-center">
+                                    <span style={{fontSize: '20px',color: 'darkblue'}}>
+                                        <b>{val.artigo}</b>
+                                    </span>
+                                    <br></br>
+                                    
+                                    <span style={{fontSize: '15px', color: 'GrayText'}}>
+                                    JCR: {val.jcr} | SJR: {val.sjr}
+                                    </span>
+
+                                    <br></br>
+
+                                    <span style={{fontSize: '15px', color: 'black'}}>
+                                        {val.tipo}
+                                    </span>
+                                    <br></br>
+                                    <span style={{fontSize: '13px', color: 'GrayText'}}>
+                                        {val.ano}
+                                    </span>
+                                    <br></br>
+                                    <br></br> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                );
+            }
+            
         })}
             </div>
         </div>
