@@ -152,13 +152,13 @@
             "singleCount":[
                 {
                     "title":"Collaborators from the center",
-                    "percent": 29,
+                    "percent": 25,
                     "animation":"fadeInRight",
                     "animationDelay":"0.4s"
                 },
                 {
                     "title":"Scholarship Holders",
-                    "percent": 0,
+                    "percent": 4,
                     "animation":"fadeInUp",
                     "animationDelay":"0.3s"
                 },
@@ -170,7 +170,7 @@
                 },
                 {
                     "title": "Publications",
-                    "percent": 426,
+                    "percent": 445,
                     "animation": "fadeInLeft",
                     "animationDelay": "0.4s"
                 }

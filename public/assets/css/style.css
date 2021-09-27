@@ -2505,12 +2505,13 @@ section.news .col-lg-4.col-md-6{
 }
 
 .CircularProgressbar {
-  width: 90% !important;
+  width: 90%;
   transform: translate(0% , 5%) !important;
   -webkit-transform: translate(0% , 5%) !important;
   -moz-transform: translate(0% , 5%) !important;
   -ms-transform: translate(0% , 5%) !important;
   -o-transform: translate(0% , 5%) !important;
+  height: auto;
 }
 .CircularProgressbar .CircularProgressbar-path{
   stroke: var(--main-blue) !important;
